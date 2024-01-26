@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Totally Accurate Hunting"
-run/main_scene="res://Levels/Main/L_Main.tscn"
+run/main_scene="res://Levels/Main/Main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 

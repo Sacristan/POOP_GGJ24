@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2vgv6ie0v40s"]
+
+[ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_km1jj"]
+[ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="1_qgept"]
+[ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="4_m7xar"]
+[ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="6_3cqww"]
+[ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="7_pw5ka"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
+size = Vector3(80, 0.5, 80)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j4se7"]
+points = PackedVector3Array(-40, -0.25, -40, -40, 0.25, -40, 40, -0.25, -40, -40, -0.25, 40, -40, 0.25, 40, 40, 0.25, -40, 40, -0.25, 40, 40, 0.25, 40)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_t5ash"]
+sky_material = SubResource("ProceduralSkyMaterial_ggqlx")
+
+[sub_resource type="Environment" id="Environment_7ofk6"]
+background_mode = 2
+sky = SubResource("Sky_t5ash")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.9
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="L_Main" type="Node3D"]
+script = ExtResource("1_km1jj")
+
+[node name="Player" parent="." instance=ExtResource("1_qgept")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="World"]
+mesh = SubResource("BoxMesh_srxwf")
+surface_material_override/0 = ExtResource("4_m7xar")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_j4se7")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_7ofk6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866026, -0.5, 0.75, -0.433013, 0, 5, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="Brush" type="Node3D" parent="."]
+script = ExtResource("6_3cqww")
+brushSize = 4.19
+paintableObject = ExtResource("7_pw5ka")
+randomRotMin = Vector3(-15, 0, 0)
+randomRotMax = Vector3(15, 0, 0)
