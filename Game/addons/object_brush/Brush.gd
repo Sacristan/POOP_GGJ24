@@ -6,6 +6,7 @@ class_name Brush
 @export var brushSize : float = 1
 @export var brushDensity : int = 10
 @export var useSurfaceNormal := true
+@export var limitToBody: StaticBody3D = null
 
 @export_category("Paintable Settings")
 @export var paintableObject: PackedScene

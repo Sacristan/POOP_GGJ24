@@ -118,15 +118,16 @@ func onDestroyedIndicator():
 var killingBrush := false
 
 func destroyIndicator():
-	if(brushInd != null && !killingBrush):
-		set_process(false)
-		
-		killingBrush = true
-#		brush.remove_child(brushInd)
-#		brushInd.free()
-#		brushInd = null
-		brushInd.onDeath.connect(onDestroyedIndicator)
-		brushInd.kill()
+	pass
+	#if(brushInd != null && !killingBrush):
+		#set_process(false)
+		#
+		#killingBrush = true
+##		brush.remove_child(brushInd)
+##		brushInd.free()
+##		brushInd = null
+		#brushInd.onDeath.connect(onDestroyedIndicator)
+		#brushInd.kill()
 		
 func updateIndicator(pos:Vector3):
 	#if(brushInd == null):
@@ -221,8 +222,7 @@ func spawnObject(pos: Vector3):
 	var result: Dictionary = raycastTestPos(pos)
 	var canPlace: bool = result.wasHit
 	var finalPos: Vector3 = result.hitPos
-	
-	print(result)
+	#print(result)
 	
 	if(canPlace):
 		var obj: Node3D = brush.paintableObject.instantiate()
@@ -261,7 +261,14 @@ func test() -> bool:
 
 	if result:
 		if result.collider:
-#			print("Collided with: ", result.collider.name)
+			#print("Collided with: ", result.collider.name)
+			
+			if(brush.limitToBody):
+				print(brush.limitToBody, result.collider)
+				
+				if(brush.limitToBody != result.collider):
+					return false
+					
 			mouseHitPoint = result.position
 			mouseHitNormal = result.normal
 			
