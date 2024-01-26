@@ -11,6 +11,8 @@ func spawnBullet():
 	var bullet := projectile.instantiate()
 	getDetachNode().add_child(bullet)
 	bullet.global_position = shootOrigin.global_position
+	bullet.global_transform.basis.z = shootOrigin.global_transform.basis.z
+	
 	bullet.fire(shootOrigin.global_transform.basis.z)
 	#bullet.fire(Vector3.FORWARD)
 	
