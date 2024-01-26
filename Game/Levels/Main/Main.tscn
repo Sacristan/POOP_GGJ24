@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=12 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
 [ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_8r0vw"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="5_f5wke"]
+[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/projectile.tscn" id="6_actrg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -40,6 +41,7 @@ mesh = SubResource("BoxMesh_srxwf")
 surface_material_override/0 = ExtResource("3_8r0vw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="World/Floor"]
+collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_j4se7")
@@ -60,3 +62,6 @@ brushSize = 7.24
 paintableObject = ExtResource("5_f5wke")
 randomRotMin = Vector3(-15, 0, -25)
 randomRotMax = Vector3(15, 0, 25)
+
+[node name="TestItem" parent="." instance=ExtResource("6_actrg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00601, 3.27935, -9.53686)
