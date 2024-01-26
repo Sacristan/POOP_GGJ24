@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dclhqo76sd3q6"]
+
+[ext_resource type="Script" path="res://addons/object_brush/BrushIndicator.gd" id="1_0cns2"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_klhhw"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 1, 0.25098)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hdtbd"]
+top_radius = 2.0
+bottom_radius = 2.0
+height = 0.25
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_e4w46"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 0.501961)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2vxib"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.125
+
+[node name="BrushIndicator" type="MeshInstance3D"]
+material_override = SubResource("ORMMaterial3D_klhhw")
+mesh = SubResource("CylinderMesh_hdtbd")
+skeleton = NodePath("../Brush")
+script = ExtResource("1_0cns2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ORMMaterial3D_e4w46")
+mesh = SubResource("CylinderMesh_2vxib")
