@@ -1,9 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt2204dd4tlat"]
+[gd_scene load_steps=4 format=3 uid="uid://dt2204dd4tlat"]
 
 [ext_resource type="PackedScene" uid="uid://fy3c477jsvfi" path="res://Models/Trees/TreeAnvil.blend" id="1_hcxx2"]
+[ext_resource type="Script" path="res://src/Tree.gd" id="2_jyaql"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a6a4b"]
+size = Vector3(7.65137, 2.5415, 9.34277)
 
 [node name="AnvilTree" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50058, 1.33755, 0.192295)
+script = ExtResource("2_jyaql")
 
 [node name="TreeAnvil" parent="." instance=ExtResource("1_hcxx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102924, 1.23003, -0.0309028)
+shape = SubResource("BoxShape3D_a6a4b")
