@@ -47,6 +47,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Poopies" type="Label" parent="UI" index="1"]
+layout_mode = 0
 offset_right = 63.0
 offset_bottom = 23.0
 size_flags_horizontal = 3
