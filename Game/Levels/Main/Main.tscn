@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
 [ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="4_ir1wr"]
 [ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="5_q7hkp"]
-[ext_resource type="PackedScene" path="res://Prefabs/poop.tscn" id="6_oq30r"]
+[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="6_oq30r"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
