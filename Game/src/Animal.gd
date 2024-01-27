@@ -33,11 +33,13 @@ func die():
 const closeEnoughDist := 1
 
 func _ready():
+	Global.registerAnimal(self)
+	
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
 	walkLoop()
-	poopLoop()
-
+	poopLoop()	
+		
 func _physics_process(delta):
 	if(move):
 		if navigation_agent.is_navigation_finished():

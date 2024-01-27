@@ -22,6 +22,8 @@ func extract():
 	if(result.hitEligibleTarget):
 		if(result.obj is Shit):
 			extractPoop(result.obj)
+		elif(result.obj is Animal):
+			result.obj.add_damage(100)
 	
 func eject():
 	if(poopPool > 0):
@@ -52,7 +54,7 @@ func raycastTestPos(origin: Vector3, dir: Vector3) -> Dictionary:
 	if result:
 		#print(result.collider)
 		
-		hitEligibleTarget = result.collider is Shit
+		hitEligibleTarget = result.collider is Shit or Animal
 		obj = result.collider
 		
 		return { "wasHit": true, "hitEligibleTarget": hitEligibleTarget, "hitPos": result.position, "obj": obj }

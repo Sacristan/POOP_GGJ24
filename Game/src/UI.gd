@@ -21,12 +21,12 @@ func _ready():
 	player.onDied.connect(onGameOver)
 	
 	Global.onPoopsiesChanged.connect(updatePoopLabel)
+	Global.onAnimalPacified.connect(updateAnimalsLabel)
 	
 	await Global.wait(0.1)
 	
 	updateHealth()
 	updateAnimalsLabel()
-	
 	#Global.player.connect("onDied", self, "gameOver")
 
 func _process(delta):
@@ -69,4 +69,4 @@ func updatePoopLabel():
 	poopRemaining.text = "Remaining: " + str(Global.poopsies.size())
 
 func updateAnimalsLabel():
-	animalsLbl.text = "Animals: %d/%d"%[0,2]
+	animalsLbl.text = "Animals: %d/%d"%[Global.animalsPacified,Global.totalAnimals]
