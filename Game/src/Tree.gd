@@ -3,6 +3,7 @@ extends Node
 @export var animationPlayer: AnimationPlayer
 @export var animationNameOnPlayerPresence: String
 
+@export var damage: float =  10
 @onready var area := $"Area3D"
 
 func _ready():
@@ -18,4 +19,4 @@ func handlePlayer(player):
 	if(animationPlayer):
 		animationPlayer.play(animationNameOnPlayerPresence)
 		
-	player.add_damage(50)
+	player.add_damage(10)

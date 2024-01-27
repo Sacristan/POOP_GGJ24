@@ -9,7 +9,6 @@ default_value_enabled = true
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_wbagr"]
 parameter_name = "Alpha"
 default_value_enabled = true
-default_value = 1.0
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_htjcc"]
 operator = 2
@@ -31,7 +30,7 @@ render_mode blend_mix;
 
 uniform vec4 Color : source_color = vec4(1.000000, 1.000000, 1.000000, 1.000000);
 uniform sampler2D tex_frg_7 : source_color;
-uniform float Alpha = 1;
+uniform float Alpha = 0;
 
 
 
@@ -70,7 +69,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-501.159, 188.536)
+graph_offset = Vector2(-513.339, 172.658)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(320, 500)

@@ -4,12 +4,23 @@ var currentTime = 0
 var player: Player
 var poopGun: PoopGun
 
+var poopsies: Array = []
+signal onPoopsiesChanged
+
 func _process(delta):
 	currentTime+=delta
 
 func retryGame():
 	get_tree().reload_current_scene()
+
+func poopRemoved(poop: Shit):
+	poopsies.erase(poop)
+	onPoopsiesChanged.emit()
 	
+func poopSpawned(poop: Shit):
+	poopsies.append(poop)
+	onPoopsiesChanged.emit()
+
 func quitGame():
 	get_tree().quit()
 	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1r7nuh6pqa5d"]
+[gd_scene load_steps=5 format=3 uid="uid://d1r7nuh6pqa5d"]
 
 [ext_resource type="Script" path="res://src/UI.gd" id="1_v2u11"]
 [ext_resource type="Shader" uid="uid://dwlmpb0rrm5jg" path="res://src/damageRect.tres" id="2_170rt"]
+[ext_resource type="LabelSettings" uid="uid://b5x5pge4hfl5d" path="res://fonts/font.tres" id="3_mprs6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hj65d"]
 shader = ExtResource("2_170rt")
@@ -15,6 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_v2u11")
 
 [node name="damageEffect" type="ColorRect" parent="."]
@@ -46,13 +49,87 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Poopies" type="Label" parent="."]
-layout_mode = 0
-offset_right = 63.0
-offset_bottom = 23.0
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Health" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Poop: 0"
+text = "Health: 100"
+label_settings = ExtResource("3_mprs6")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Animals" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Animals: 3"
+label_settings = ExtResource("3_mprs6")
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control2" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PoopStashed" type="Label" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "STASHED: 0
+"
+label_settings = ExtResource("3_mprs6")
+vertical_alignment = 1
+uppercase = true
+
+[node name="PoopDelivered" type="Label" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Delivered: 0
+"
+label_settings = ExtResource("3_mprs6")
 horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PoopRemaining" type="Label" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Remaining: 0"
+label_settings = ExtResource("3_mprs6")
+horizontal_alignment = 2
 vertical_alignment = 1
 uppercase = true

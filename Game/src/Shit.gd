@@ -15,10 +15,13 @@ func poopOut(dir: Vector3, force: float):
 func extract(dir: Vector3, force: float):
 	isExtracting = true
 	fire(dir, force)
+	Global.poopRemoved(self)
 	
 func eject(dir: Vector3, force: float):
 	isExtracting = false
 	fire(dir, force)
+	
+	Global.poopSpawned(self)
 	
 func fire(dir: Vector3, force: float):
 	apply_impulse(dir * force)

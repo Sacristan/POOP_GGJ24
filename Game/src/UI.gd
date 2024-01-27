@@ -3,7 +3,13 @@ extends Control
 @export var player: Player
 @export var poopGun: PoopGun
 
-@onready var poopLbl: Label = $"Poopies"
+@onready var poopStashed: Label = $"Control2/HBoxContainer/PoopStashed"
+@onready var poopDelivered: Label = $"Control2/HBoxContainer/PoopDelivered"
+@onready var poopRemaining: Label = $"Control2/HBoxContainer/PoopRemaining"
+
+@onready var animalsLbl: Label = $"Control/HBoxContainer/Animals"
+@onready var healthLbl: Label = $"Control/HBoxContainer/Health"
+
 @onready var damageEffect = $damageEffect
 
 const DamageIndicationAppearTime = 0.5
@@ -12,11 +18,16 @@ var lastTimeDamageReceived = 0
 var appearTimer = 0
 
 func _ready():
-	poopGun.onEjected.connect(updatePoopLabel)
-	poopGun.onExtracted.connect(updatePoopLabel)
-	
 	player.onDamageReceived.connect(onReceivedDamage)
 	player.onDied.connect(onGameOver)
+	
+	Global.onPoopsiesChanged.connect(updatePoopLabel)
+	
+	await Global.wait(0.1).timeout
+	
+	updateHealth()
+	updateAnimalsLabel()
+	
 	#Global.player.connect("onDied", self, "gameOver")
 
 func _process(delta):
@@ -48,6 +59,15 @@ func onReceivedDamage(health):
 	lastTimeDamageReceived = Global.currentTime
 	set_process(true)
 	appearTimer = 0
-	
+	updateHealth()
+
+func updateHealth():
+	healthLbl.text = "Health: "+ str(Global.player.health)
+
 func updatePoopLabel():
-	poopLbl.text = "Poop: " + str(poopGun.poopPool)
+	poopStashed.text = "Stashed: " + str(poopGun.poopPool)
+	poopDelivered.text = "Delivered: " + str(0)
+	poopRemaining.text = "Remaining: " + str(Global.poopsies.size())
+
+func updateAnimalsLabel():
+	animalsLbl.text = "Animals: " + str(2)
