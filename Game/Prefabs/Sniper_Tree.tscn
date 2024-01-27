@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqi4a8rfhauun"]
+
+[ext_resource type="Script" path="res://src/Tree.gd" id="1_2c0m8"]
+[ext_resource type="PackedScene" uid="uid://duik51p8op4xs" path="res://Models/Trees/SniperTree.blend" id="1_hik2b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6s1sh"]
+size = Vector3(4.76599, 1, 1)
+
+[node name="Sniper_Tree" type="Node3D" node_paths=PackedStringArray("animationPlayer")]
+script = ExtResource("1_2c0m8")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+
+[node name="SniperTree" parent="." instance=ExtResource("1_hik2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105063, 0)
+
+[node name="Cube" parent="SniperTree" index="1"]
+transform = Transform3D(0.276035, 0, 0, 0, 0.276035, 4.49718e-08, 0, -4.49718e-08, 0.276035, -0.370849, 9.26445, -0.15691)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6148, 0.562325, 0)
+shape = SubResource("BoxShape3D_6s1sh")
+
+[editable path="SniperTree"]
