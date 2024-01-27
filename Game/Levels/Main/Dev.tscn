@@ -1,14 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://j4d2gj1eqjgs"]
+[gd_scene load_steps=13 format=3 uid="uid://j4d2gj1eqjgs"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_7671s"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_20mhr"]
 [ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_b0xpq"]
-[ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="4_ssufi"]
-[ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="5_ksp5a"]
 [ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="6_c846b"]
+[ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="6_rt80a"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="7_jrjtw"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
-[ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="9_mc5od"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -59,13 +57,8 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866026, -0.5, 0.75
 shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
-[node name="rabbitcube" parent="." instance=ExtResource("4_ssufi")]
-transform = Transform3D(-0.0776588, 0, -0.99698, 0, 1, 0, 0.99698, 0, -0.0776588, 0, 0, 5.07898)
-visible = false
-
-[node name="deercube" parent="." instance=ExtResource("5_ksp5a")]
-transform = Transform3D(0.664292, 0, -0.747474, 0, 1, 0, 0.747474, 0, 0.664292, 5.60653, 0, 5.64632)
-visible = false
+[node name="Deer" parent="." instance=ExtResource("6_rt80a")]
+transform = Transform3D(-0.983638, 0, -0.180159, 0, 1, 0, 0.180159, 0, -0.983638, 0, 0, -12.482)
 
 [node name="testShit" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834328, 0.776118, 12.1051)
@@ -107,5 +100,3 @@ paintableObject = ExtResource("8_nafpi")
 minSize = 1.0
 randomRotMin = Vector3(-15, 0, 0)
 randomRotMax = Vector3(15, 0, 15)
-
-[node name="AnvilTree" parent="." instance=ExtResource("9_mc5od")]

@@ -1,17 +1,10 @@
-extends Node3D
+extends PoopEjector
 class_name PoopGun
-
-@export var projectile: PackedScene
-@export var shootOrigin: Node3D
 
 var poopPool: int = 0
 
 signal onEjected
 signal onExtracted
-
-var fwd_dir : Vector3 :
-	get:
-		return shootOrigin.global_transform.basis.z
 
 func _process(delta):
 	if(Input.is_action_just_pressed("extract")):
@@ -34,22 +27,13 @@ func eject():
 
 func extractPoop(obj: Shit):
 	poopPool = poopPool + 1
-	obj.extract(-fwd_dir)
+	obj.extract(-fwd_dir, projectileForce)
 	obj.cleanup(2)
 	onExtracted.emit()
 
 func ejectPoop():
-	var poop := projectile.instantiate()
-	getDetachNode().add_child(poop)
-	poop.global_position = shootOrigin.global_position
-	poop.global_transform.basis.z = fwd_dir
-	
-	poop.eject(fwd_dir)
-	
+	super.ejectPoop()
 	poopPool = poopPool - 1
-	
-func getDetachNode() -> Node3D:
-	return get_tree().root.get_child(0)
 	
 func raycastTestPos(origin: Vector3, dir: Vector3) -> Dictionary:
 	var params = PhysicsRayQueryParameters3D.new()
