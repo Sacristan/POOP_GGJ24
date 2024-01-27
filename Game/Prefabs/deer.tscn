@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdyh3inpncroh"]
+
+[ext_resource type="Script" path="res://src/Deer.gd" id="1_50h72"]
+[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="2_22qx1"]
+[ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="2_ki57d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijby7"]
+
+[node name="Deer" type="CharacterBody3D" node_paths=PackedStringArray("shootOrigin")]
+script = ExtResource("1_50h72")
+projectile = ExtResource("2_22qx1")
+shootOrigin = NodePath("ejector")
+projectileForce = 10.0
+
+[node name="deercube" parent="." instance=ExtResource("2_ki57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.5, 0)
+
+[node name="ejector" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.676, 0.983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ijby7")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

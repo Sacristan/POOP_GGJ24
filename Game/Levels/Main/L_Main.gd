@@ -4,7 +4,6 @@ extends Node3D
 #    Close your game faster by clicking 'Esc'    #
 #   Change mouse mode by clicking 'Shift + F1'   #
 #------------------------------------------------#
-
 @export var fast_close := true
 
 # Called when the node enters the scene tree for the first time.

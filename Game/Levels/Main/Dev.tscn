@@ -3,10 +3,13 @@
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_7671s"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_20mhr"]
 [ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_b0xpq"]
-[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="6_c846b"]
 [ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="6_rt80a"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="7_jrjtw"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_h6oae"]
+vertices = PackedVector3Array(-39.5, 0.75, -39.5, -39.5, 0.75, 39.5, 39.5, 0.75, 39.5, 39.5, 0.75, -39.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -35,7 +38,8 @@ script = ExtResource("1_7671s")
 [node name="Player" parent="." instance=ExtResource("2_20mhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="World" type="Node3D" parent="."]
+[node name="World" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_h6oae")
 
 [node name="Floor" type="MeshInstance3D" parent="World"]
 mesh = SubResource("BoxMesh_srxwf")
@@ -58,39 +62,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
 [node name="Deer" parent="." instance=ExtResource("6_rt80a")]
-transform = Transform3D(-0.983638, 0, -0.180159, 0, 1, 0, 0.180159, 0, -0.983638, 0, 0, -12.482)
-
-[node name="testShit" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834328, 0.776118, 12.1051)
-
-[node name="Brush_1706345058_58228" parent="testShit" instance=ExtResource("6_c846b")]
-
-[node name="Brush_1706345058_58263" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35599, 0, -8.66434)
-
-[node name="Brush_1706345058_58288" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8373, 0, -6.17645)
-
-[node name="Brush_1706345058_58312" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33342, 0, -1.61437)
-
-[node name="Brush_1706345058_58331" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77571, 0, -3.19252)
-
-[node name="Brush_1706345058_58356" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66514, 0, -10.4636)
-
-[node name="Brush_1706345058_58403" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17717, 0, -6.49958)
-
-[node name="Brush_1706345058_58431" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61028, 0, -8.46697)
-
-[node name="Brush_1706345058_58443" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125313, 0, -10.6332)
-
-[node name="Brush_1706345058_58458" parent="testShit" instance=ExtResource("6_c846b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39672, 0, -3.56918)
+transform = Transform3D(-0.983638, 0, -0.180159, 0, 1, 0, 0.180159, 0, -0.983638, 0, 0.720646, -12.482)
 
 [node name="Brush" type="Node3D" parent="."]
 script = ExtResource("7_jrjtw")
