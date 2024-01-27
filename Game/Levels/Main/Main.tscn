@@ -30,7 +30,7 @@ ambient_light_sky_contribution = 0.9
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="L_Main" type="Node3D"]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_c81lp")
 
 [node name="Player" parent="." instance=ExtResource("2_a8g32")]
