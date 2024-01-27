@@ -10,10 +10,12 @@ func _ready():
 	
 func areaEntered(body):
 	if(body is Player):
-		handlePlayer()
+		handlePlayer(body)
 
-func handlePlayer():
+func handlePlayer(player):
 	print("player entered tree "+name)
 	
 	if(animationPlayer):
 		animationPlayer.play(animationNameOnPlayerPresence)
+		
+	player.add_damage(100)

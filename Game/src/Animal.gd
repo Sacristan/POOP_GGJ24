@@ -19,6 +19,17 @@ var move := false
 @onready var body: CharacterBody3D = $"."
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 
+var health: float = 100
+
+func add_damage(damage: float):
+	health -= damage
+	
+	if(health <= 0):
+		die()
+
+func die():
+	pass
+
 const closeEnoughDist := 1
 
 func _ready():

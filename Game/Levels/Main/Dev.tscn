@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://j4d2gj1eqjgs"]
+[gd_scene load_steps=16 format=3 uid="uid://j4d2gj1eqjgs"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_7671s"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_20mhr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cexjjyukf012l" path="res://Prefabs/rabbit.tscn" id="7_vhwpb"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
 [ext_resource type="PackedScene" uid="uid://ptl44yejwi47" path="res://Prefabs/bear.tscn" id="8_nlil6"]
+[ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_8c44g"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_h6oae"]
 vertices = PackedVector3Array(-39.5, 0.75, -39.5, -39.5, 0.75, 39.5, 39.5, 0.75, 39.5, 39.5, 0.75, -39.5)
@@ -80,3 +81,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6183, 0.788908, -11.5361)
 
 [node name="Bear" parent="." instance=ExtResource("8_nlil6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3973, 0.997513, -7.70284)
+
+[node name="RegularTree" parent="." instance=ExtResource("9_8c44g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42969, 0.25, -3.21666)
