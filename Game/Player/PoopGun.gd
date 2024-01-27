@@ -3,11 +3,21 @@ extends Node3D
 @export var projectile: PackedScene
 @export var shootOrigin: Node3D
 
+var poopPool: Array = []
+
 func _process(delta):
-	if(Input.is_action_just_pressed("shoot")):
-		spawnBullet()
+	if(Input.is_action_just_pressed("extract")):
+		extract()
+	elif(Input.is_action_just_pressed("eject")):
+		eject()
 	
-func spawnBullet():
+func extract():
+	pass
+	
+func eject():
+	spawnPoop()
+	
+func spawnPoop():
 	var bullet := projectile.instantiate()
 	getDetachNode().add_child(bullet)
 	bullet.global_position = shootOrigin.global_position
