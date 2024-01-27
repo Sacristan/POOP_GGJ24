@@ -114,6 +114,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="PoopDelivered" type="Label" parent="Control2/HBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6

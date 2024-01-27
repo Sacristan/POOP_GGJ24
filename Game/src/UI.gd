@@ -4,7 +4,6 @@ extends Control
 @export var poopGun: PoopGun
 
 @onready var poopStashed: Label = $"Control2/HBoxContainer/PoopStashed"
-@onready var poopDelivered: Label = $"Control2/HBoxContainer/PoopDelivered"
 @onready var poopRemaining: Label = $"Control2/HBoxContainer/PoopRemaining"
 
 @onready var animalsLbl: Label = $"Control/HBoxContainer/Animals"
@@ -66,8 +65,8 @@ func updateHealth():
 
 func updatePoopLabel():
 	poopStashed.text = "Stashed: " + str(poopGun.poopPool)
-	poopDelivered.text = "Delivered: " + str(Global.poopsiesRemoved)
+	#poopDelivered.text = "Delivered: " + str(Global.poopsiesRemoved)
 	poopRemaining.text = "Remaining: " + str(Global.poopsies.size())
 
 func updateAnimalsLabel():
-	animalsLbl.text = "Animals: " + str(2)
+	animalsLbl.text = "Animals: %d/%d"%[0,2]

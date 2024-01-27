@@ -16,8 +16,9 @@ func _process(delta):
 func retryGame():
 	get_tree().reload_current_scene()
 
-func poopsiesDelivered():
+func poopsiesDelivered(poop: Shit):
 	poopsiesRemoved +=1
+	poopsies.erase(poop)
 	onPoopsiesChanged.emit()
 
 func poopRemoved(poop: Shit):

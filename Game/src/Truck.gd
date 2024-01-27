@@ -8,7 +8,8 @@ func _ready():
 	area.body_entered.connect(bodyEntered)
 	
 func bodyEntered(body):
-	print("truck " + body.name)
 	if(body is Shit):
-		Global.poopsiesDelivered()
+		Global.poopsiesDelivered(body)
+		
+		await get_tree().physics_frame
 		body.queue_free()
