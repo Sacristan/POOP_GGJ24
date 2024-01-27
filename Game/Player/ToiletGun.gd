@@ -16,6 +16,6 @@ func spawnBullet():
 	bullet.fire(shootOrigin.global_transform.basis.z)
 	#bullet.fire(Vector3.FORWARD)
 	
-
 func getDetachNode() -> Node3D:
 	return get_tree().root.get_child(0)
+	
