@@ -3,7 +3,7 @@ extends Node3D
 @export var projectile: PackedScene
 @export var shootOrigin: Node3D
 
-var poopPool: Array = []
+var poopPool: int = 0
 
 var fwd_dir : Vector3 :
 	get:
@@ -25,11 +25,13 @@ func extract():
 			extractPoop(result.obj)
 	
 func eject():
-	if(not poopPool.is_empty()):
+	if(poopPool > 0):
 		ejectPoop()
 
 func extractPoop(obj: Poop):
+	poopPool = poopPool + 1
 	obj.fire(-fwd_dir)
+	obj.cleanup(2)
 
 func ejectPoop():
 	var bullet := projectile.instantiate()
@@ -38,7 +40,8 @@ func ejectPoop():
 	bullet.global_transform.basis.z = fwd_dir
 	
 	bullet.fire(fwd_dir)
-	#bullet.fire(Vector3.FORWARD)
+	
+	poopPool = poopPool - 1
 	
 func getDetachNode() -> Node3D:
 	return get_tree().root.get_child(0)
