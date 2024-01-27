@@ -1,5 +1,12 @@
 extends Node
 
+var currentTime = 0
+var player: Player
+var poopGun: PoopGun
+
+func _process(delta):
+	currentTime+=delta
+
 func retryGame():
 	get_tree().reload_current_scene()
 	

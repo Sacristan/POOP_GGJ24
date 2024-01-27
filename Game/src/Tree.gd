@@ -18,4 +18,4 @@ func handlePlayer(player):
 	if(animationPlayer):
 		animationPlayer.play(animationNameOnPlayerPresence)
 		
-	player.add_damage(100)
+	player.add_damage(50)

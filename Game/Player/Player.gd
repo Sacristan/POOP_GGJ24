@@ -15,13 +15,29 @@ var input_axis := Vector2()
 
 var health: float = 100
 
+signal onDamageReceived
+signal onDied
+
+var isDead := false
+
+func _ready():
+	Global.player = self
+
 func add_damage(damage: float):
 	health -= damage
+	
+	onDamageReceived.emit(health)
 	
 	if(health <= 0):
 		die()
 
 func die():
+	if(isDead):
+		return
+	else:
+		isDead = true
+		
+	onDied.emit()
 	await Global.wait(2).timeout
 	Global.retryGame()
 

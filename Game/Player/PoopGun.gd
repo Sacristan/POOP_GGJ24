@@ -6,6 +6,9 @@ var poopPool: int = 0
 signal onEjected
 signal onExtracted
 
+func _ready():
+	Global.poopGun = self
+
 func _process(delta):
 	if(Input.is_action_just_pressed("extract")):
 		extract()
