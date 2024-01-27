@@ -1,6 +1,5 @@
 extends CharacterBody3D
-class_name MovementController
-
+class_name Player
 
 @export var gravity_multiplier := 3.0
 @export var speed := 10

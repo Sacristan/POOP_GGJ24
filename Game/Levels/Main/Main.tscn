@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=14 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
 [ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_8r0vw"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
-[ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="5_f5wke"]
+[ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="4_ir1wr"]
+[ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="5_q7hkp"]
+[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="6_oq30r"]
+[ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -55,9 +58,51 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866026, -0.5, 0.75
 shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
+[node name="rabbitcube" parent="." instance=ExtResource("4_ir1wr")]
+transform = Transform3D(-0.0776588, 0, -0.99698, 0, 1, 0, 0.99698, 0, -0.0776588, 0, 0, 5.07898)
+visible = false
+
+[node name="deercube" parent="." instance=ExtResource("5_q7hkp")]
+transform = Transform3D(0.664292, 0, -0.747474, 0, 1, 0, 0.747474, 0, 0.664292, 5.60653, 0, 5.64632)
+visible = false
+
+[node name="testShit" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834328, 0.776118, 12.1051)
+
+[node name="Brush_1706345058_58228" parent="testShit" instance=ExtResource("6_oq30r")]
+
+[node name="Brush_1706345058_58263" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35599, 0, -8.66434)
+
+[node name="Brush_1706345058_58288" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8373, 0, -6.17645)
+
+[node name="Brush_1706345058_58312" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33342, 0, -1.61437)
+
+[node name="Brush_1706345058_58331" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77571, 0, -3.19252)
+
+[node name="Brush_1706345058_58356" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66514, 0, -10.4636)
+
+[node name="Brush_1706345058_58403" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17717, 0, -6.49958)
+
+[node name="Brush_1706345058_58431" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61028, 0, -8.46697)
+
+[node name="Brush_1706345058_58443" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125313, 0, -10.6332)
+
+[node name="Brush_1706345058_58458" parent="testShit" instance=ExtResource("6_oq30r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39672, 0, -3.56918)
+
 [node name="Brush" type="Node3D" parent="."]
 script = ExtResource("4_5sk7t")
 brushSize = 7.24
-paintableObject = ExtResource("5_f5wke")
-randomRotMin = Vector3(-15, 0, -25)
-randomRotMax = Vector3(15, 0, 25)
+brushDensity = 5
+paintableObject = ExtResource("9_ybxfb")
+minSize = 1.0
+randomRotMin = Vector3(-15, 0, 0)
+randomRotMax = Vector3(15, 0, 15)

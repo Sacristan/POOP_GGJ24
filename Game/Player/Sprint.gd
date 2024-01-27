@@ -1,8 +1,8 @@
 extends Node
 
 
-@export_node_path("MovementController") var controller_path := NodePath("../")
-@onready var controller: MovementController = get_node(controller_path)
+@export_node_path("Player") var controller_path := NodePath("../")
+@onready var controller: Player = get_node(controller_path)
 
 @export_node_path("Node3D") var head_path := NodePath("../Head")
 @onready var cam: Camera3D = get_node(head_path).cam
@@ -11,7 +11,6 @@ extends Node
 @export var fov_multiplier := 1.05
 @onready var normal_speed: int = controller.speed
 @onready var normal_fov: float = cam.fov
-
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
