@@ -4,7 +4,6 @@ extends Node3D
 #    Close your game faster by clicking 'Esc'    #
 #   Change mouse mode by clicking 'Shift + F1'   #
 #------------------------------------------------#
-
 @export var fast_close := true
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +18,6 @@ func _ready() -> void:
 		print("** 'Esc' to close 'Shift + F1' to release mouse **")
 	
 	set_process_input(fast_close)
-
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"ui_cancel"):
