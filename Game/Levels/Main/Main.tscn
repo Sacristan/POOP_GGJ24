@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=20 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
+[ext_resource type="PackedScene" uid="uid://c5l675oe8pkvj" path="res://Prefabs/puffer_tree.tscn" id="10_unwhe"]
 [ext_resource type="PackedScene" uid="uid://cexjjyukf012l" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
 [ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
+[ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="11_rk4it"]
+[ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
 sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
@@ -49,6 +52,7 @@ script = ExtResource("1_c81lp")
 
 [node name="Player" parent="." instance=ExtResource("2_a8g32")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+metadata/_edit_lock_ = true
 
 [node name="Lighting" type="Node" parent="."]
 
@@ -63,6 +67,7 @@ directional_shadow_max_distance = 250.0
 sky_mode = 1
 
 [node name="Brush" type="Node3D" parent="."]
+visible = false
 script = ExtResource("4_5sk7t")
 brushSize = 7.24
 brushDensity = 5
@@ -116,3 +121,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 1.04962, -15.2589)
 
 [node name="Rabbit" parent="." instance=ExtResource("11_1gb1w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1621, 0.99054, 14.6151)
+
+[node name="Tree" parent="." instance=ExtResource("11_rk4it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41998, -1.1663, -6.38694)
+
+[node name="Node3D" parent="." instance=ExtResource("12_6vaq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406984, 4.76837e-07, 1.22873)
+
+[node name="Puffer_Tree" parent="." instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.38322)
+
+[node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3907, 0.315224, 3.94893)
