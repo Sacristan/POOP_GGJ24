@@ -19,3 +19,5 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19165, 1.47821, -0.01929)
 shape = SubResource("BoxShape3D_3s1c1")
+
+[editable path="Tree"]
