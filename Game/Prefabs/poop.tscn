@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://byqgfx3o6jt4p"]
 
-[ext_resource type="Script" path="res://src/Poop.gd" id="1_bbuki"]
+[ext_resource type="Script" path="res://src/Shit.gd" id="1_rbqmg"]
 [ext_resource type="PackedScene" uid="uid://dnfx6l3vngqlo" path="res://Models/Shit/shitprojectile.glb" id="2_ims3r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w72hk"]
@@ -12,7 +12,7 @@
 [node name="Poop" type="RigidBody3D"]
 collision_layer = 16
 collision_mask = 8
-script = ExtResource("1_bbuki")
+script = ExtResource("1_rbqmg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_w72hk")

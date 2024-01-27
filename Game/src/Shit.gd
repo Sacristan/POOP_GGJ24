@@ -1,5 +1,5 @@
 extends RigidBody3D
-class_name Poop
+class_name Shit
 
 var force := 25
 @onready var timer: Timer = $"Timer"
