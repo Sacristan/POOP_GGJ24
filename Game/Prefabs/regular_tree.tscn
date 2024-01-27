@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp1q2nlvdqimx"]
+
+[ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="1_qk1ms"]
+
+[node name="RegularTree" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823418, 1.48583, 1.64045)
+
+[node name="Tree" parent="." instance=ExtResource("1_qk1ms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823418, -1.48583, -1.64045)
