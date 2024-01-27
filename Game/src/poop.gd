@@ -1,5 +1,5 @@
 extends RigidBody3D
-
+class_name Poop
 #@onready var rigidbody: RigidBody3D = get_node("RigidBody3D")
 var force := 25
 #@onready var timer: Timer = get_node("Timer")
