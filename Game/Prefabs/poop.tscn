@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://byqgfx3o6jt4p"]
+[gd_scene load_steps=6 format=3 uid="uid://byqgfx3o6jt4p"]
 
 [ext_resource type="Script" path="res://src/Poop.gd" id="1_bbuki"]
 [ext_resource type="PackedScene" uid="uid://dnfx6l3vngqlo" path="res://Models/Shit/shitprojectile.glb" id="2_ims3r"]
@@ -6,6 +6,8 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_w72hk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_smnwc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_md2o5"]
 
 [node name="TestItem" type="RigidBody3D"]
 collision_layer = 16
@@ -24,3 +26,9 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.5, 0)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_md2o5")
