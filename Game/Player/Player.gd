@@ -38,7 +38,7 @@ func die():
 		isDead = true
 		
 	onDied.emit()
-	await Global.wait(2).timeout
+	await Global.wait(2)
 	Global.retryGame()
 
 # Called every physics tick. 'delta' is constant

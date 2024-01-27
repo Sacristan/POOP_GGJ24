@@ -34,4 +34,4 @@ func getCurrentSceneName():
 	return get_tree().get_current_scene().get_name()
 
 func wait(time):
-	return get_tree().create_timer(time, false)
+	return get_tree().create_timer(time, false).timeout

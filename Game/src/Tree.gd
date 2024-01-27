@@ -2,8 +2,12 @@ extends Node
 
 @export var animationPlayer: AnimationPlayer
 @export var animationNameOnPlayerPresence: String
+@export var damageDelay: float = 1.5
+@export var damageOnAreaEnter: float = 10
 
 @onready var area := $"Area3D"
+
+var playerInArea := false
 
 func _ready():
 	self.area.body_entered.connect(areaEntered)
@@ -20,14 +24,20 @@ func areaExited(body):
 func handlePlayerEntered(player):
 	print("player entered tree "+name)
 	
+	playerInArea = true
+	
 	if(animationPlayer):
 		#animationPlayer.speed_scale = 1
 		animationPlayer.play(animationNameOnPlayerPresence)
-
-	player.add_damage(10)
+		await Global.wait(damageDelay)
+		
+		if(playerInArea):
+			player.add_damage(damageOnAreaEnter)
 
 func handlePlayerExited(player):
 	print("player exited tree "+name)
+	
+	playerInArea = false
 	
 	if(animationPlayer):
 		#animationPlayer.speed_scale = -1

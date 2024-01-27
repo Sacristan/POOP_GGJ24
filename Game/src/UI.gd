@@ -23,7 +23,7 @@ func _ready():
 	
 	Global.onPoopsiesChanged.connect(updatePoopLabel)
 	
-	await Global.wait(0.1).timeout
+	await Global.wait(0.1)
 	
 	updateHealth()
 	updateAnimalsLabel()
