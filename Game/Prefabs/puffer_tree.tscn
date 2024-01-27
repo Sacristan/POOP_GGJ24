@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://5nffijmctrpc"]
+
+[ext_resource type="Script" path="res://src/Tree.gd" id="1_b5jbt"]
+[ext_resource type="PackedScene" uid="uid://dejnu8i6ysgjv" path="res://Models/Trees/PufferTree.blend" id="1_m1p35"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nte7b"]
+size = Vector3(7.4993, 1, 6.65295)
+
+[node name="Puffer_Tree" type="Node3D"]
+script = ExtResource("1_b5jbt")
+
+[node name="PufferTree" parent="." instance=ExtResource("1_m1p35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.716185, -1.20495, -1.6261)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173325, 0.804255, 0.184875)
+shape = SubResource("BoxShape3D_nte7b")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=17 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
+[ext_resource type="PackedScene" uid="uid://5nffijmctrpc" path="res://Prefabs/puffer_tree.tscn" id="10_unwhe"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -111,6 +112,9 @@ randomRotMax = Vector3(15, 0, 15)
 
 [node name="RegularTree" parent="." instance=ExtResource("9_md84u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56672, 0.25, 3.46945)
+
+[node name="Puffer_Tree" parent="." instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2345, 0, -15.7144)
 
 [node name="AnvilTree" parent="." instance=ExtResource("10_dfbq3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97079, 0.25, 11.1868)
