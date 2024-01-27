@@ -9,7 +9,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_md2o5"]
 
-[node name="TestItem" type="RigidBody3D"]
+[node name="Poop" type="RigidBody3D"]
 collision_layer = 16
 collision_mask = 8
 script = ExtResource("1_bbuki")
@@ -27,8 +27,8 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.5, 0)
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Trigger" type="Area3D" parent="."]
 collision_mask = 15
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trigger"]
 shape = SubResource("BoxShape3D_md2o5")

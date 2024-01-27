@@ -1,9 +1,13 @@
 extends Node3D
+class_name PoopGun
 
 @export var projectile: PackedScene
 @export var shootOrigin: Node3D
 
 var poopPool: int = 0
+
+signal onEjected
+signal onExtracted
 
 var fwd_dir : Vector3 :
 	get:
@@ -16,9 +20,8 @@ func _process(delta):
 		eject()
 	
 func extract():
-	print("extract")
 	var result := raycastTestPos(shootOrigin.global_position, fwd_dir)
-	print(result)
+	#print(result)
 	
 	if(result.hitEligibleTarget):
 		if(result.obj is Poop):
@@ -27,19 +30,21 @@ func extract():
 func eject():
 	if(poopPool > 0):
 		ejectPoop()
+		onEjected.emit()
 
 func extractPoop(obj: Poop):
 	poopPool = poopPool + 1
-	obj.fire(-fwd_dir)
+	obj.extract(-fwd_dir)
 	obj.cleanup(2)
+	onExtracted.emit()
 
 func ejectPoop():
-	var bullet := projectile.instantiate()
-	getDetachNode().add_child(bullet)
-	bullet.global_position = shootOrigin.global_position
-	bullet.global_transform.basis.z = fwd_dir
+	var poop := projectile.instantiate()
+	getDetachNode().add_child(poop)
+	poop.global_position = shootOrigin.global_position
+	poop.global_transform.basis.z = fwd_dir
 	
-	bullet.fire(fwd_dir)
+	poop.eject(fwd_dir)
 	
 	poopPool = poopPool - 1
 	
@@ -51,15 +56,14 @@ func raycastTestPos(origin: Vector3, dir: Vector3) -> Dictionary:
 	params.from = origin
 	params.to = origin + dir * 100
 	
-	DebugDraw3D.draw_line(params.from, params.to, Color.YELLOW, 3)
-	
+	#DebugDraw3D.draw_line(params.from, params.to, Color.YELLOW, 3)
 	var result = get_world_3d().direct_space_state.intersect_ray(params)
 	
 	var hitEligibleTarget := false
 	var obj = null
 	
 	if result:
-		print(result.collider)
+		#print(result.collider)
 		
 		hitEligibleTarget = result.collider is Poop
 		obj = result.collider
