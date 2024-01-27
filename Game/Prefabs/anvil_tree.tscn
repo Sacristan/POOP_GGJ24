@@ -6,12 +6,22 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_a6a4b"]
 size = Vector3(7.65137, 2.5415, 9.34277)
 
-[node name="AnvilTree" type="Node3D"]
+[node name="AnvilTree" type="Node3D" node_paths=PackedStringArray("animationPlayer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50058, 1.33755, 0.192295)
 script = ExtResource("2_jyaql")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
 
 [node name="TreeAnvil" parent="." instance=ExtResource("1_hcxx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
+
+[node name="Skeleton3D" parent="TreeAnvil/Armature" index="0"]
+bones/3/rotation = Quaternion(0.0125435, -0.00440325, -0.0219131, 0.999672)
+bones/3/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(-0.00970992, 0.0114833, -0.0173344, 0.999737)
+bones/6/scale = Vector3(1, 1, 1)
+bones/10/position = Vector3(0.486241, 9.02463, 0.232465)
+bones/10/rotation = Quaternion(-0.00263009, -1.88897e-05, 0.00151438, 0.999995)
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 3
@@ -19,3 +29,5 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102924, 1.23003, -0.0309028)
 shape = SubResource("BoxShape3D_a6a4b")
+
+[editable path="TreeAnvil"]

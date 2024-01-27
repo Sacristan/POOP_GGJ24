@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="6_c846b"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="7_jrjtw"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
-[ext_resource type="PackedScene" uid="uid://cdwqotd3yhlqw" path="res://Prefabs/regular_tree.tscn" id="9_2xja0"]
+[ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="9_mc5od"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
 size = Vector3(80, 0.5, 80)
@@ -108,5 +108,4 @@ minSize = 1.0
 randomRotMin = Vector3(-15, 0, 0)
 randomRotMax = Vector3(15, 0, 15)
 
-[node name="RegularTree" parent="." instance=ExtResource("9_2xja0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56672, 0.25, 3.46945)
+[node name="AnvilTree" parent="." instance=ExtResource("9_mc5od")]
