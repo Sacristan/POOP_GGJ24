@@ -1,24 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=17 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
-[ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_8r0vw"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
 [ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="4_ir1wr"]
 [ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="5_q7hkp"]
 [ext_resource type="PackedScene" path="res://Prefabs/poop.tscn" id="6_oq30r"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
+[ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
-size = Vector3(80, 0.5, 80)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j4se7"]
-points = PackedVector3Array(-40, -0.25, -40, -40, 0.25, -40, 40, -0.25, -40, -40, -0.25, 40, -40, 0.25, 40, 40, 0.25, -40, 40, -0.25, 40, 40, 0.25, 40)
+[ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
+sky_horizon_color = Color(0.411765, 0.756863, 0.14902, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
 [sub_resource type="Sky" id="Sky_t5ash"]
@@ -26,11 +22,24 @@ sky_material = SubResource("ProceduralSkyMaterial_ggqlx")
 
 [sub_resource type="Environment" id="Environment_7ofk6"]
 background_mode = 2
+background_energy_multiplier = 1.18
 sky = SubResource("Sky_t5ash")
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.9
+ambient_light_source = 3
+ambient_light_color = Color(0.568627, 0.568627, 0.568627, 1)
+ambient_light_sky_contribution = 0.05
+reflected_light_source = 1
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0, 0.643137, 0.537255, 1)
+fog_density = 0.002
+fog_sky_affect = 0.107
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2gus"]
+size = Vector3(100, 7.93018, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xyke"]
+size = Vector3(100, 0.1, 100)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_c81lp")
@@ -38,27 +47,17 @@ script = ExtResource("1_c81lp")
 [node name="Player" parent="." instance=ExtResource("2_a8g32")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="World" type="Node3D" parent="."]
-
-[node name="Floor" type="MeshInstance3D" parent="World"]
-mesh = SubResource("BoxMesh_srxwf")
-surface_material_override/0 = ExtResource("3_8r0vw")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="World/Floor"]
-collision_layer = 9
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_j4se7")
-
 [node name="Lighting" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = SubResource("Environment_7ofk6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866026, -0.5, 0.75, -0.433013, 0, 5, 0)
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 206.879, 0)
 shadow_enabled = true
+directional_shadow_split_1 = 0.136
 directional_shadow_max_distance = 250.0
+sky_mode = 1
 
 [node name="rabbitcube" parent="." instance=ExtResource("4_ir1wr")]
 transform = Transform3D(-0.0776588, 0, -0.99698, 0, 1, 0, 0.99698, 0, -0.0776588, 0, 0, 5.07898)
@@ -114,3 +113,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56672, 0.25, 3.46945)
 
 [node name="AnvilTree" parent="." instance=ExtResource("10_dfbq3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97079, 0.25, 11.1868)
+
+[node name="Mountains" parent="." instance=ExtResource("10_6cpko")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60744, 0.250031, -1.99017)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mountains"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mountains/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02656e-06, 3.46509, -47.5794)
+shape = SubResource("BoxShape3D_u2gus")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Mountains/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26498e-06, 3.46509, 47.2942)
+shape = SubResource("BoxShape3D_u2gus")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Mountains/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 46.1637, 3.46509, 2.29416)
+shape = SubResource("BoxShape3D_u2gus")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Mountains/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.7363, 3.46509, 2.29416)
+shape = SubResource("BoxShape3D_u2gus")
+
+[node name="Platform" parent="." instance=ExtResource("11_7h464")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.41832, 0.250004, -2.40795)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0907454, 0.0152206, 0.0337982)
+shape = SubResource("BoxShape3D_7xyke")
