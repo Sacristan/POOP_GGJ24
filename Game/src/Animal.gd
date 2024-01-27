@@ -8,7 +8,7 @@ class_name Animal
 @export var maxWanderDelayTime: float = 10
 
 const minDist = 5
-const maxDist = 8
+const maxDist = 10
 
 signal reachedDestination
 
