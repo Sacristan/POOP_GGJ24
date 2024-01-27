@@ -6,9 +6,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_a6a4b"]
 size = Vector3(7.65137, 2.5415, 9.34277)
 
-[node name="AnvilTree" type="Node3D"]
+[node name="AnvilTree" type="Node3D" node_paths=PackedStringArray("animationPlayer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50058, 1.33755, 0.192295)
 script = ExtResource("2_jyaql")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
 
 [node name="TreeAnvil" parent="." instance=ExtResource("1_hcxx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
