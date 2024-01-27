@@ -66,7 +66,7 @@ func updateHealth():
 
 func updatePoopLabel():
 	poopStashed.text = "Stashed: " + str(poopGun.poopPool)
-	poopDelivered.text = "Delivered: " + str(0)
+	poopDelivered.text = "Delivered: " + str(Global.poopsiesRemoved)
 	poopRemaining.text = "Remaining: " + str(Global.poopsies.size())
 
 func updateAnimalsLabel():

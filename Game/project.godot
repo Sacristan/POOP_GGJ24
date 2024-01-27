@@ -140,7 +140,8 @@ eject={
 3d_physics/layer_1="Objects"
 3d_physics/layer_2="Player"
 3d_physics/layer_4="floor"
-3d_physics/layer_5="projectile"
+3d_physics/layer_5="poop"
+3d_physics/layer_6="truckback"
 
 [rendering]
 

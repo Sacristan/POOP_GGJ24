@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlltw84wnx4cr"]
+
+[ext_resource type="PackedScene" uid="uid://bpv73gaocbyla" path="res://Models/TruckfShapeKeys.glb" id="1_aro3r"]
+[ext_resource type="Script" path="res://src/Truck.gd" id="1_wmr7x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_582sq"]
+size = Vector3(3.64809, 3.20316, 4.23413)
+
+[node name="Truck" type="Node3D"]
+script = ExtResource("1_wmr7x")
+
+[node name="TruckfShapeKeys" parent="." instance=ExtResource("1_aro3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.89, -0.678124, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.135719, 1.60198, -3.14545)
+shape = SubResource("BoxShape3D_582sq")

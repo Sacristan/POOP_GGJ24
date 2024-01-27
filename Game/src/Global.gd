@@ -3,8 +3,11 @@ extends Node
 var currentTime = 0
 var player: Player
 var poopGun: PoopGun
+var truck: Truck
 
 var poopsies: Array = []
+var poopsiesRemoved: int = 0
+
 signal onPoopsiesChanged
 
 func _process(delta):
@@ -12,6 +15,10 @@ func _process(delta):
 
 func retryGame():
 	get_tree().reload_current_scene()
+
+func poopsiesDelivered():
+	poopsiesRemoved +=1
+	onPoopsiesChanged.emit()
 
 func poopRemoved(poop: Shit):
 	poopsies.erase(poop)

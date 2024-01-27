@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://j4d2gj1eqjgs"]
+[gd_scene load_steps=17 format=3 uid="uid://j4d2gj1eqjgs"]
 
 [ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_7671s"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_20mhr"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="8_jj63m"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_8c44g"]
+[ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="10_cylxa"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_h6oae"]
 vertices = PackedVector3Array(-39.5, 0.75, -39.5, -39.5, 0.75, 39.5, 39.5, 0.75, 39.5, 39.5, 0.75, -39.5)
@@ -84,3 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42969, 0.25, 16.1817)
 
 [node name="AnvilTree" parent="." instance=ExtResource("8_jj63m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98744, 0.370138, -8.56908)
+
+[node name="Truck" parent="." instance=ExtResource("10_cylxa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.43658)
