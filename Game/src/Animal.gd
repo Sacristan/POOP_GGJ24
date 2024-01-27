@@ -4,15 +4,18 @@ class_name Animal
 @export var minPoopDelayTime: float = 1
 @export var maxPoopDelayTime: float = 3
 
-const minDist = 3
-const maxDist = 15
+@export var minWanderDelayTime: float = 3
+@export var maxWanderDelayTime: float = 10
+
+const minDist = 5
+const maxDist = 8
 
 signal reachedDestination
 
 var targetPos := Vector3.ZERO
 var move := false
 
-@export var speed: float = 5 
+@export var speed: float = 2 
 @onready var body: CharacterBody3D = $"."
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 
@@ -21,17 +24,11 @@ const closeEnoughDist := 1
 func _ready():
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
-	
-	#call_deferred("actor_setup")
 	walkLoop()
 	poopLoop()
 
 func _physics_process(delta):
 	if(move):
-		print(navigation_agent.get_next_path_position())
-			
-		print(navigation_agent)
-		
 		if navigation_agent.is_navigation_finished():
 			return
 
@@ -44,6 +41,15 @@ func _physics_process(delta):
 		if(global_position.distance_to(targetPos) < closeEnoughDist):
 			reachedDestination.emit()
 	
+	var direction = (targetPos - global_position).normalized()
+	lookAtXZ(global_position + direction)
+
+func lookAtXZ(target):
+	target.y = global_position.y	
+	
+	if(global_position.distance_to(target) > 0.1):
+		look_at(target, Vector3.UP)
+
 func updateNavAgent():
 	navigation_agent.set_target_position(targetPos)
 	
@@ -63,18 +69,18 @@ func walkLoop():
 	
 	var originalHeight = global_position.y
 	
+	await wait(1).timeout
+	
 	while(true):
-		await wait(1).timeout
-		
 		targetPos = getWanderPos()
-		
-		print(targetPos)
+		#print(targetPos)
 		updateNavAgent()
 		
 		move = true
 		await reachedDestination
 		move = false
-		print("reachedDestination")
+		
+		await wait(walkTimeout()).timeout
 
 func poopLoop():
 	while(true):
@@ -84,6 +90,10 @@ func poopLoop():
 func poop():
 	ejectPoop()
 
+func walkTimeout():
+	randomize()
+	return randf_range(minWanderDelayTime, maxWanderDelayTime)
+	
 func poopTimeout():
 	randomize()
 	return randf_range(minPoopDelayTime, maxPoopDelayTime)
@@ -103,7 +113,9 @@ func getWanderPos():
 	while(true):
 		tries+=1
 		
-		result = get_random_pos_in_sphere(maxDist)
+		var point = get_random_pos_in_sphere(maxDist)
+		result = get_point_on_map(point, 5)
+		
 		result.y = 0
 		result += global_position
 		
@@ -112,7 +124,17 @@ func getWanderPos():
 		
 		if(tries > 30):
 			return result
-		
+
+func get_point_on_map(target_point: Vector3, min_dist_from_edge: float) -> Vector3:
+	var map := get_world_3d().navigation_map
+	var closest_point := NavigationServer3D.map_get_closest_point(map, target_point)
+	var delta := closest_point - target_point
+	var is_on_map = delta.is_zero_approx()  # Answer to original question!
+	if not is_on_map and min_dist_from_edge > 0:	
+		delta = delta.normalized()
+		closest_point += delta * min_dist_from_edge
+	return closest_point
+
 func get_random_pos_in_sphere (radius : float) -> Vector3:
 	randomize()
 	
