@@ -31,7 +31,7 @@ func gameLost():
 
 func hasGameBeenWon() -> bool:
 	var allAnimalsPacified := gm.animalsPacified >= gm.totalAnimals
-	var noPoopsiesInForest := gm.poopsies.size() >= 0
+	var noPoopsiesInForest := gm.poopsies.size() <= 0
 	var noPoopInStash := poopGun.poopPool <= 0
 	
 	return allAnimalsPacified && noPoopsiesInForest && noPoopInStash
