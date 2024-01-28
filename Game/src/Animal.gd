@@ -21,6 +21,7 @@ var move := false
 
 var health: float = 100
 var isDead:=false
+const closeEnoughDist := 1
 
 func add_damage(damage: float):
 	health -= damage
@@ -34,8 +35,17 @@ func die():
 	set_process(false)
 	set_physics_process(false)
 	Global.animalPacified(self)
-
-const closeEnoughDist := 1
+	
+	sleep()
+	
+func sleep():
+	rotate_x(90)
+	
+	#var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
+	#tween.tween_property(self, "global_rotation", global)
+	#tween.tween_property($Sprite, "modulate", Color.RED, 1)
+	#tween.tween_property($Sprite, "scale", Vector2(), 1)
+	#tween.tween_callback($Sprite.queue_free)
 
 func _ready():
 	Global.registerAnimal(self)
