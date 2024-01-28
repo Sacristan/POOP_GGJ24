@@ -5,15 +5,15 @@
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
-[ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
+[ext_resource type="PackedScene" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
 [ext_resource type="PackedScene" uid="uid://c5l675oe8pkvj" path="res://Prefabs/puffer_tree.tscn" id="10_unwhe"]
-[ext_resource type="PackedScene" uid="uid://cexjjyukf012l" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
+[ext_resource type="PackedScene" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
 [ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
 [ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="11_rk4it"]
 [ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
-[ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="14_02hsb"]
+[ext_resource type="PackedScene" path="res://truck.tscn" id="14_02hsb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
 sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
@@ -127,14 +127,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1621, 0.99054, 14.6151)
 [node name="Tree" parent="." instance=ExtResource("11_rk4it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41998, -1.1663, -6.38694)
 
-[node name="Node3D" parent="." instance=ExtResource("12_6vaq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406984, 4.76837e-07, 1.22873)
-
-[node name="Puffer_Tree" parent="." instance=ExtResource("10_unwhe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.38322)
-
-[node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3907, 0.315224, 3.94893)
-
 [node name="Truck" parent="." instance=ExtResource("14_02hsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.3485)
+
+[node name="Puffer_Tree" parent="." instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65494, 0.315224, -8.71381)
+
+[node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3454, 0.315225, 2.68319)
