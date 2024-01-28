@@ -15,7 +15,7 @@ func _ready():
 	set_physics_process(true)
 
 func _process(delta):
-	if(Input.is_action_just_pressed("ui_exit")):
+	if(Input.is_action_just_pressed("ui_cancel")):
 		Global.launchGame()
 
 func _physics_process(delta):

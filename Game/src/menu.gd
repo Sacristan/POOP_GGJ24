@@ -6,3 +6,4 @@ extends Node3D
 func _ready():
 	playButton.pressed.connect(Global.launchBriefing)
 	quitButton.pressed.connect(Global.quitGame)
+	Global.enableCursor(true)
