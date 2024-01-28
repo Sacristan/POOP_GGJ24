@@ -6,6 +6,9 @@ var poopPool: int = 0
 signal onEjected
 signal onExtracted
 
+@onready var extractSFX := $"extractSFX"
+@onready var ejectSFX := $"ejectSFX"
+
 func _ready():
 	Global.poopGun = self
 
@@ -22,11 +25,14 @@ func extract():
 	if(result.hitEligibleTarget):
 		if(result.obj is Shit):
 			extractPoop(result.obj)
+			extractSFX.play()
+			
 		elif(result.obj is Animal):
 			result.obj.add_damage(100)
 	
 func eject():
 	if(poopPool > 0):
+		ejectSFX.play()
 		ejectPoop()
 		onEjected.emit()
 
