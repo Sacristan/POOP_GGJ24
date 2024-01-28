@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dctd184r6jbtu"]
 
-[ext_resource type="AudioStream" uid="uid://b2pnmh1gq6nh4" path="res://audio/wind.wav" id="1_6ajc1"]
+[ext_resource type="AudioStream" uid="uid://c0ily5aposlwf" path="res://audio/wind.ogg" id="1_ragon"]
 [ext_resource type="AudioStream" uid="uid://c8b17mehtj72k" path="res://audio/music-rusty-violin.mp3" id="2_qfhst"]
 [ext_resource type="Script" path="res://src/randomSounds.gd" id="3_wqaqo"]
 [ext_resource type="AudioStream" uid="uid://lsjvvgqg5q6m" path="res://audio/birds_01.wav" id="4_wp7hl"]
@@ -11,7 +11,7 @@
 [node name="Audio" type="Node3D"]
 
 [node name="wind" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_6ajc1")
+stream = ExtResource("1_ragon")
 autoplay = true
 
 [node name="music" type="AudioStreamPlayer" parent="."]
