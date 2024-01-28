@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm8pof2t54o17"]
+[gd_scene load_steps=8 format=3 uid="uid://cm8pof2t54o17"]
 
-[ext_resource type="LabelSettings" uid="uid://b5x5pge4hfl5d" path="res://fonts/font.tres" id="1_4mfxt"]
 [ext_resource type="Script" path="res://src/menu.gd" id="1_cdc3o"]
 [ext_resource type="PackedScene" uid="uid://c2y8ylx5e4j1s" path="res://Models/ShitCar/DriftCar.blend" id="3_r1oby"]
 [ext_resource type="PackedScene" uid="uid://dmx8v0w4eqag5" path="res://Models/toiletforMenu.blend" id="4_uqbeh"]
+[ext_resource type="PackedScene" uid="uid://cqnid3md81nt5" path="res://Models/deercube123.glb" id="5_8d5rv"]
+[ext_resource type="Texture2D" uid="uid://b7y2ky3gp7ke2" path="res://Models/POOPlogo.svg" id="5_mhq0u"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lljsp"]
 
@@ -37,13 +38,6 @@ offset_left = 50.0
 offset_top = 50.0
 offset_right = 421.0
 offset_bottom = 257.0
-
-[node name="Label" type="Label" parent="MenuUI/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "P.O.O.P."
-label_settings = ExtResource("1_4mfxt")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/Control"]
 layout_mode = 1
@@ -126,3 +120,18 @@ transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, -0.09, 0, 0.09, -3.93403e-0
 
 [node name="toiletforMenu" parent="." instance=ExtResource("4_uqbeh")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.458559, 0.0389052, -0.908999)
+
+[node name="deercube123" parent="." instance=ExtResource("5_8d5rv")]
+transform = Transform3D(-3.76199e-09, 0, 0.0860643, 0, 0.0860643, 0, -0.0860643, 0, -3.76199e-09, 0.288477, 0.0179903, -0.879026)
+
+[node name="deercube124" parent="." instance=ExtResource("5_8d5rv")]
+transform = Transform3D(0.0222751, 0, -0.0831317, 0, 0.0860643, 0, 0.0831317, 0, 0.0222751, -0.296474, 0.158775, -0.879026)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 58.0
+offset_top = 26.0
+offset_right = 365.0
+offset_bottom = 134.0
+texture = ExtResource("5_mhq0u")
+expand_mode = 1
+stretch_mode = 4

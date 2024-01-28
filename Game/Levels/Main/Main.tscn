@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
 [ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
 [ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="14_02hsb"]
-[ext_resource type="PackedScene" uid="uid://la1frj4mbl67" path="res://Prefabs/shit_catcher.tscn" id="17_olcdk"]
-[ext_resource type="PackedScene" uid="uid://dctd184r6jbtu" path="res://Prefabs/audio.tscn" id="18_2f87n"]
+[ext_resource type="PackedScene" path="res://Prefabs/shit_catcher.tscn" id="17_olcdk"]
+[ext_resource type="PackedScene" path="res://Prefabs/audio.tscn" id="18_2f87n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
 sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
