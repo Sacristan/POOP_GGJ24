@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://ccvxt0upcr0dg"]
 
-[ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_km1jj"]
+[ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_km1jj"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="1_qgept"]
 [ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://Levels/Main/Geometry/Floor.tscn" id="1_yb0tt"]
 [ext_resource type="PackedScene" uid="uid://cdn7d5mxwdyks" path="res://Levels/Main/Geometry/Wall.tscn" id="3_jw8hm"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="6_3cqww"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="7_pw5ka"]
 [ext_resource type="PackedScene" uid="uid://dpiebtqe1mapr" path="res://Models/Toilet/Toilet.blend" id="8_ghakf"]
-[ext_resource type="PackedScene" uid="uid://ccbm1unaani3s" path="res://Models/AnimTest/TestANIM.glb" id="9_72csv"]
+[ext_resource type="PackedScene" path="res://Models/AnimTest/TestANIM.glb" id="9_72csv"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_egctf"]
 size = Vector3(8, 4, 4)

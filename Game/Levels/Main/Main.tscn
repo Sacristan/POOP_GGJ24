@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://d2vgv6ie0v40s"]
 
-[ext_resource type="Script" path="res://Levels/Main/L_Main.gd" id="1_c81lp"]
+[ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]

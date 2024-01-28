@@ -49,7 +49,7 @@ func _ready():
 	#Global.player.connect("onDied", self, "gameOver")
 
 func _process(delta):
-	var timeDelta = Global.currentTime - lastTimeDamageReceived
+	var timeDelta = Global.gm.currentTime - lastTimeDamageReceived
 	var t
 	var alpha = 0
 	
@@ -74,7 +74,7 @@ func onGameOver():
 	pass
 
 func onReceivedDamage(health):
-	lastTimeDamageReceived = Global.currentTime
+	lastTimeDamageReceived = Global.gm.currentTime
 	set_process(true)
 	appearTimer = 0
 	updateHealth()
@@ -85,7 +85,7 @@ func updateHealth():
 func updatePoopLabel():
 	poopStashed.text = "Stashed: " + str(poopGun.poopPool)
 	#poopDelivered.text = "Delivered: " + str(Global.poopsiesRemoved)
-	poopRemaining.text = "Remaining: " + str(Global.poopsies.size())
+	poopRemaining.text = "Remaining: " + str(Global.gm.poopsies.size())
 
 func updateAnimalsLabel():
-	animalsLbl.text = "Animals: %d/%d"%[Global.animalsPacified,Global.totalAnimals]
+	animalsLbl.text = "Animals: %d/%d"%[Global.gm.animalsPacified,Global.gm.totalAnimals]

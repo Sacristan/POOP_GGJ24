@@ -1,13 +1,18 @@
 extends Node3D
+class_name GameManager
 
-#-----------------SCENE--SCRIPT------------------#
-#    Close your game faster by clicking 'Esc'    #
-#   Change mouse mode by clicking 'Shift + F1'   #
-#------------------------------------------------#
 @export var fast_close := true
 
-# Called when the node enters the scene tree for the first time.
+var currentTime = 0
+var poopsies: Array = []
+var poopsiesRemoved: int = 0
+
+var totalAnimals := 0
+var animalsPacified := 0
+
 func _ready() -> void:
+	Global.gm = self
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	if !OS.is_debug_build():
@@ -18,6 +23,9 @@ func _ready() -> void:
 		print("** 'Esc' to close 'Shift + F1' to release mouse **")
 	
 	set_process_input(fast_close)
+
+func _process(delta):
+	currentTime+=delta
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"ui_cancel"):

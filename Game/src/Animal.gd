@@ -48,6 +48,8 @@ func sleep():
 	#tween.tween_callback($Sprite.queue_free)
 
 func _ready():
+	await get_tree().physics_frame
+	
 	Global.registerAnimal(self)
 	
 	navigation_agent.path_desired_distance = 0.5

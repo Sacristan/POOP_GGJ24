@@ -1,15 +1,9 @@
 extends Node
 
-var currentTime = 0
+var gm: GameManager
 var player: Player
 var poopGun: PoopGun
 var truck: Truck
-
-var poopsies: Array = []
-var poopsiesRemoved: int = 0
-
-var totalAnimals := 0
-var animalsPacified := 0
 
 signal onPoopsiesChanged
 signal onAnimalPacified
@@ -36,38 +30,35 @@ func gameLost():
 		Global.retryGame()
 
 func hasGameBeenWon() -> bool:
-	var allAnimalsPacified := animalsPacified >= totalAnimals
-	var noPoopsiesInForest := poopsies.size() >= 0
+	var allAnimalsPacified := gm.animalsPacified >= gm.totalAnimals
+	var noPoopsiesInForest := gm.poopsies.size() >= 0
 	var noPoopInStash := poopGun.poopPool <= 0
 	
 	return allAnimalsPacified && noPoopsiesInForest && noPoopInStash
 
-func _process(delta):
-	currentTime+=delta
-
 func animalPacified(animal: Animal):
-	animalsPacified+=1
+	gm.animalsPacified+=1
 	onAnimalPacified.emit()
 	checkIfGameWon()
 
 func registerAnimal(animal: Animal):
-	totalAnimals += 1
+	gm.totalAnimals += 1
 
 func retryGame():
 	get_tree().reload_current_scene()
 
 func poopsiesDelivered(poop: Shit):
-	poopsiesRemoved +=1
-	poopsies.erase(poop)
+	gm.poopsiesRemoved +=1
+	gm.poopsies.erase(poop)
 	onPoopsiesChanged.emit()
 	checkIfGameWon()
 
 func poopRemoved(poop: Shit):
-	poopsies.erase(poop)
+	gm.poopsies.erase(poop)
 	onPoopsiesChanged.emit()
 	
 func poopSpawned(poop: Shit):
-	poopsies.append(poop)
+	gm.poopsies.append(poop)
 	onPoopsiesChanged.emit()
 
 func quitGame():
