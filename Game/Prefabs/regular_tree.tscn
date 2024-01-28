@@ -9,6 +9,8 @@ size = Vector3(7, 2.81714, 7)
 [node name="RegularTree" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823418, 1.48583, 1.64045)
 script = ExtResource("1_i8s3q")
+damageDelay = 0.5
+damageOnAreaEnter = 0.0
 
 [node name="Tree" parent="." instance=ExtResource("1_qk1ms")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823418, -1.48583, -1.64045)
