@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=22 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="11_rk4it"]
 [ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
 [ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="14_02hsb"]
+[ext_resource type="PackedScene" uid="uid://la1frj4mbl67" path="res://Prefabs/shit_catcher.tscn" id="15_25f60"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
 sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
@@ -135,3 +136,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65494, 0.315224, -8.71381)
 
 [node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3454, 0.315225, 2.68319)
+
+[node name="ShitCatcher" parent="." instance=ExtResource("15_25f60")]
