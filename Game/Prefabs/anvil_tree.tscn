@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt2204dd4tlat"]
+[gd_scene load_steps=5 format=3 uid="uid://dt2204dd4tlat"]
 
 [ext_resource type="PackedScene" uid="uid://fy3c477jsvfi" path="res://Models/Trees/TreeAnvil.blend" id="1_hcxx2"]
 [ext_resource type="Script" path="res://src/Tree.gd" id="2_jyaql"]
+[ext_resource type="AudioStream" uid="uid://b53lvnbac18w3" path="res://audio/anvil_hit.ogg" id="3_kbv8s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a6a4b"]
 size = Vector3(6, 2.5415, 2)
@@ -45,5 +46,8 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72276, 1.23003, 0.64048)
 shape = SubResource("BoxShape3D_a6a4b")
+
+[node name="attackEnterSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_kbv8s")
 
 [editable path="TreeAnvil"]

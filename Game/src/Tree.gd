@@ -7,6 +7,9 @@ extends Node
 
 @onready var area := $"Area3D"
 
+@onready var playerEnterSFX: AudioStreamPlayer3D = $"playerEnterSFX"
+@onready var attackEnterSFX: AudioStreamPlayer3D = $"attackEnterSFX"
+
 var playerInArea := false
 
 func _ready():
@@ -26,6 +29,9 @@ func handlePlayerEntered(player):
 	
 	playerInArea = true
 	
+	if(playerEnterSFX):
+		playerEnterSFX.play()
+	
 	if(animationPlayer):
 		#animationPlayer.speed_scale = 1
 		animationPlayer.play(animationNameOnPlayerPresence)
@@ -33,6 +39,9 @@ func handlePlayerEntered(player):
 		
 		if(playerInArea):
 			player.add_damage(damageOnAreaEnter)
+			
+			if(attackEnterSFX):
+				attackEnterSFX.play()
 
 func handlePlayerExited(player):
 	print("player exited tree "+name)

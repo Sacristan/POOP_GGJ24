@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5l675oe8pkvj"]
+[gd_scene load_steps=5 format=3 uid="uid://c5l675oe8pkvj"]
 
 [ext_resource type="Script" path="res://src/Tree.gd" id="1_b5jbt"]
 [ext_resource type="PackedScene" uid="uid://dejnu8i6ysgjv" path="res://Models/Trees/PufferTree.blend" id="1_m1p35"]
+[ext_resource type="AudioStream" uid="uid://rxg52j6ed6y0" path="res://audio/puffer.wav" id="3_44phv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_msvph"]
 size = Vector3(5.18811, 1, 4.79774)
@@ -30,5 +31,8 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.148987, 0.96808, -0.0512314)
 shape = SubResource("BoxShape3D_msvph")
+
+[node name="playerEnterSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_44phv")
 
 [editable path="PufferTree"]
