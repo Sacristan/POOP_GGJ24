@@ -20,7 +20,6 @@ func extract(dir: Vector3, force: float):
 func eject(dir: Vector3, force: float):
 	isExtracting = false
 	fire(dir, force)
-	
 	Global.poopSpawned(self)
 	
 func fire(dir: Vector3, force: float):
