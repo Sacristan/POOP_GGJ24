@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=3 uid="uid://dctd184r6jbtu"]
+
+[ext_resource type="AudioStream" uid="uid://b2pnmh1gq6nh4" path="res://audio/wind.wav" id="1_6ajc1"]
+[ext_resource type="AudioStream" uid="uid://c8b17mehtj72k" path="res://audio/music-rusty-violin.mp3" id="2_qfhst"]
+[ext_resource type="Script" path="res://src/randomSounds.gd" id="3_wqaqo"]
+[ext_resource type="AudioStream" uid="uid://lsjvvgqg5q6m" path="res://audio/birds_01.wav" id="4_wp7hl"]
+[ext_resource type="AudioStream" uid="uid://cqr4bijh52f5v" path="res://audio/birds_02.wav" id="5_xn2we"]
+[ext_resource type="AudioStream" uid="uid://drtq18tmaceqs" path="res://audio/birds_03.wav" id="6_g11d0"]
+[ext_resource type="AudioStream" uid="uid://b17wfrhq6uevs" path="res://audio/birds_04.wav" id="7_ke807"]
+
+[node name="Audio" type="Node3D"]
+
+[node name="wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_6ajc1")
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qfhst")
+volume_db = -5.0
+autoplay = true
+
+[node name="soundEffects" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_wqaqo")
+clips = Array[AudioStream]([ExtResource("4_wp7hl"), ExtResource("5_xn2we"), ExtResource("6_g11d0"), ExtResource("7_ke807")])
