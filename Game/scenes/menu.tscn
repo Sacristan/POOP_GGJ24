@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm8pof2t54o17"]
+[gd_scene load_steps=7 format=3 uid="uid://cm8pof2t54o17"]
 
 [ext_resource type="LabelSettings" uid="uid://b5x5pge4hfl5d" path="res://fonts/font.tres" id="1_4mfxt"]
 [ext_resource type="Script" path="res://src/menu.gd" id="1_cdc3o"]
+[ext_resource type="PackedScene" uid="uid://c2y8ylx5e4j1s" path="res://Models/ShitCar/DriftCar.blend" id="3_r1oby"]
+[ext_resource type="PackedScene" uid="uid://dmx8v0w4eqag5" path="res://Models/toiletforMenu.blend" id="4_uqbeh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lljsp"]
 
@@ -116,3 +118,11 @@ LMouse - extract
 RMouse - eject"
 label_settings = SubResource("LabelSettings_dvwat")
 horizontal_alignment = 2
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="DriftCar" parent="Node3D" instance=ExtResource("3_r1oby")]
+transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, -0.09, 0, 0.09, -3.93403e-09, 1.16524, -0.121213, -1.12259)
+
+[node name="toiletforMenu" parent="." instance=ExtResource("4_uqbeh")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.458559, 0.0389052, -0.908999)

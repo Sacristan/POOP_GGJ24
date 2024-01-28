@@ -2,10 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cihdgb7qjxst2" path="res://Models/ShitCar/ShittuCar.gltf" id="1_no5n5"]
 
-[node name="ShittuCar" instance=ExtResource("1_no5n5")]
+[node name="Node3D" type="Node3D"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
-speed_scale = -0.899
-
-[node name="ShittuCar" parent="." index="2" instance=ExtResource("1_no5n5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5993, 1.27469, -1.983)
+[node name="ShittuCar" parent="." instance=ExtResource("1_no5n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74012, 0, -0.0619645)
