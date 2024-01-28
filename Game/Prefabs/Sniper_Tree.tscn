@@ -19,6 +19,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105063, 0)
 [node name="Cube" parent="SniperTree" index="1"]
 transform = Transform3D(0.276035, 0, 0, 0, 0.276035, 4.49718e-08, 0, -4.49718e-08, 0.276035, -0.370849, 9.26445, -0.15691)
 
+[node name="AnimationPlayer" parent="SniperTree" index="2"]
+speed_scale = 1.265
+
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 3
 
