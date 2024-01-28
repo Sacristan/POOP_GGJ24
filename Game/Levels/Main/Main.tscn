@@ -1,19 +1,18 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=24 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
+[ext_resource type="Script" path="res://src/Tree.gd" id="6_d5b4h"]
 [ext_resource type="Texture2D" uid="uid://dsnmwfnodqqqp" path="res://Models/textures/PizzaGround.png" id="8_rn7f8"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="Texture2D" uid="uid://maitumejh0j4" path="res://Models/PizzaGroundNornmalna.png" id="9_xk8iw"]
-[ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
 [ext_resource type="PackedScene" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
 [ext_resource type="PackedScene" uid="uid://c5l675oe8pkvj" path="res://Prefabs/puffer_tree.tscn" id="10_unwhe"]
 [ext_resource type="PackedScene" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
 [ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
-[ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="11_rk4it"]
 [ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
 [ext_resource type="PackedScene" path="res://truck.tscn" id="14_02hsb"]
 [ext_resource type="PackedScene" path="res://Prefabs/shit_catcher.tscn" id="17_olcdk"]
@@ -42,7 +41,7 @@ fog_density = 0.002
 fog_sky_affect = 0.107
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1qakk"]
-vertices = PackedVector3Array(-149.661, 1.06709, -149.064, -149.661, 1.06709, -141.564, -145.911, 1.06709, -141.564, -145.911, 1.06709, -149.064, -144.661, 1.06709, -149.064, -144.661, 1.06709, -141.564, 138.589, 1.06709, -141.564, 138.589, 1.06709, -149.064, 139.839, 1.06709, -149.064, 139.839, 1.06709, -141.564, 149.589, 1.06709, -141.564, 149.589, 1.06709, -149.064, -149.661, 1.06709, 140.686, -147.161, 1.06709, 140.686, -146.911, 1.06709, 140.186, -145.911, 1.06709, -140.314, -149.661, 1.06709, -140.314, -146.911, 1.06709, 140.186, -145.911, 1.06709, 140.186, -145.911, 1.06709, -140.314, -144.661, 1.06709, -140.314, -144.661, 1.06709, 140.186, 138.589, 1.06709, 140.186, 138.589, 1.06709, -140.314, 146.839, 1.06709, 140.186, 147.089, 1.06709, 140.686, 149.589, 1.06709, 140.686, 149.589, 1.06709, -140.314, 139.839, 1.06709, -140.314, 139.839, 1.06709, 140.186, 146.839, 1.06709, 140.186, 149.589, 1.06709, -140.314, -146.911, 1.06709, 141.436, -147.161, 1.06709, 140.686, -149.661, 1.06709, 140.686, -149.661, 1.06709, 147.936, -145.911, 1.06709, 147.936, -145.911, 1.06709, 147.936, -145.911, 1.06709, 141.436, -146.911, 1.06709, 141.436, 149.589, 1.06709, 140.686, 147.089, 1.06709, 140.686, 146.839, 1.06709, 141.436, 149.589, 1.06709, 147.936, 146.839, 1.06709, 141.436, 139.839, 1.06709, 141.436, 139.839, 1.06709, 147.936, 149.589, 1.06709, 147.936, -144.661, 1.06709, 141.436, -144.661, 1.06709, 147.936, 138.589, 1.06709, 147.936, 138.589, 1.06709, 141.436, -149.661, 1.06709, 149.186, -149.661, 1.06709, 149.686, -145.911, 1.06709, 149.686, -145.911, 1.06709, 149.186, -144.661, 1.06709, 149.186, -144.661, 1.06709, 149.686, 138.589, 1.06709, 149.686, 138.589, 1.06709, 149.186, 139.839, 1.06709, 149.186, 139.839, 1.06709, 149.686, 149.589, 1.06709, 149.686, 149.589, 1.06709, 149.186)
+vertices = PackedVector3Array(-149.661, 1.31709, -149.064, -149.661, 1.31709, -141.564, -145.911, 1.31709, -141.564, -145.911, 1.31709, -149.064, -144.661, 1.31709, -149.064, -144.661, 1.31709, -141.564, 138.589, 1.31709, -141.564, 138.589, 1.31709, -149.064, 139.839, 1.31709, -149.064, 139.839, 1.31709, -141.564, 149.589, 1.31709, -141.564, 149.589, 1.31709, -149.064, -149.661, 1.31709, 140.686, -147.161, 1.31709, 140.686, -146.911, 1.31709, 140.186, -145.911, 1.31709, -140.314, -149.661, 1.31709, -140.314, -146.911, 1.31709, 140.186, -145.911, 1.31709, 140.186, -145.911, 1.31709, -140.314, -144.661, 1.31709, -140.314, -144.661, 1.31709, 140.186, 138.589, 1.31709, 140.186, 138.589, 1.31709, -140.314, 146.839, 1.31709, 140.186, 147.089, 1.31709, 140.686, 149.589, 1.31709, 140.686, 149.589, 1.31709, -140.314, 139.839, 1.31709, -140.314, 139.839, 1.31709, 140.186, 146.839, 1.31709, 140.186, 149.589, 1.31709, -140.314, -146.911, 1.31709, 141.436, -147.161, 1.31709, 140.686, -149.661, 1.31709, 140.686, -149.661, 1.31709, 147.936, -145.911, 1.31709, 147.936, -145.911, 1.31709, 147.936, -145.911, 1.31709, 141.436, -146.911, 1.31709, 141.436, 149.589, 1.31709, 140.686, 147.089, 1.31709, 140.686, 146.839, 1.31709, 141.436, 149.589, 1.31709, 147.936, 146.839, 1.31709, 141.436, 139.839, 1.31709, 141.436, 139.839, 1.31709, 147.936, 149.589, 1.31709, 147.936, -144.661, 1.31709, 141.436, -144.661, 1.31709, 147.936, 138.589, 1.31709, 147.936, 138.589, 1.31709, 141.436, -149.661, 1.31709, 149.186, -149.661, 1.31709, 149.686, -145.911, 1.31709, 149.686, -145.911, 1.31709, 149.186, -144.661, 1.31709, 149.186, -144.661, 1.31709, 149.686, 138.589, 1.31709, 149.686, 138.589, 1.31709, 149.186, 139.839, 1.31709, 149.186, 139.839, 1.31709, 149.686, 149.589, 1.31709, 149.686, 149.589, 1.31709, 149.186)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(19, 18, 17), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(35, 32, 36), PackedInt32Array(39, 38, 37), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(55, 54, 52), PackedInt32Array(52, 54, 53), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(63, 62, 60), PackedInt32Array(60, 62, 61)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iklx3"]
@@ -78,20 +77,1955 @@ directional_shadow_max_distance = 250.0
 sky_mode = 1
 
 [node name="Brush" type="Node3D" parent="."]
-visible = false
 script = ExtResource("4_5sk7t")
-brushSize = 7.24
-brushDensity = 5
-paintableObject = ExtResource("9_ybxfb")
+brushSize = 10.0
+brushDensity = 1
+paintableObject = ExtResource("12_6vaq6")
 minSize = 1.0
-randomRotMin = Vector3(-15, 0, 0)
-randomRotMax = Vector3(15, 0, 15)
+randomRotMin = Vector3(0, 180, 0)
+randomRotMax = Vector3(0, -180, 0)
 
-[node name="RegularTree" parent="." instance=ExtResource("9_md84u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56672, 0.25, 3.46945)
+[node name="Brush_1706437379_822" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61373, 0.476567, 42.3843)
+script = ExtResource("6_d5b4h")
 
-[node name="AnvilTree" parent="." instance=ExtResource("10_dfbq3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97079, 0.25, 11.1868)
+[node name="Brush_1706437379_956" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.411, 0.476567, 38.3773)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437380_589" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8535, 0.476567, 27.9704)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437380_941" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7995, 0.476567, 32.5524)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437381_09" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6312, 0.476567, 15.6124)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437381_208" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3908, 0.476567, 6.77148)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_429" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.40582, 0.476567, 24.4895)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_578" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18918, 0.476567, 30.1159)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_638" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3421, 0.476567, 33.608)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_762" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5849, 0.476567, 21.2119)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_91" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6981, 0.476567, 32.0734)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437385_987" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9005, 0.476567, 49.374)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_059" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74824, 0.476567, 62.3113)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_128" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.698614, 0.476567, 63.771)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_2" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2283, 0.476567, 72.679)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_301" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1854, 0.476567, 83.9669)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_444" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.608, 0.476567, 98.4021)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437386_477" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.152, 0.476567, 105.237)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437387_062" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0447, 0.476567, 64.6913)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437387_182" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.334, 0.476567, 62.6599)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437387_212" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.2998, 0.476567, 62.5758)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437387_259" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.7739, 0.476567, 63.3775)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437387_286" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.8819, 0.476567, 60.0979)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437392_986" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23439, 0.476567, 78.7959)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437393_125" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28649, 0.476567, 74.6657)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437393_157" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7509, 0.476567, 80.6497)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437393_201" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3405, 0.476567, 71.829)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437393_266" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.7119, 0.476567, 78.6341)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437393_307" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.4062, 0.476567, 71.7977)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_006" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6289, 0.476567, 18.0831)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_13" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.3239, 0.476567, 9.36849)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_193" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8884, 0.476567, 5.12633)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_572" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5423, 0.476567, -12.5696)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_683" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.4718, 0.476567, -20.2327)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437397_794" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8745, 0.476567, -24.9768)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_133" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6117, 0.476567, -4.25182)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_26" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7809, 0.476567, 16.817)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_398" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81289, 0.476567, 16.8388)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_442" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39918, 0.476567, 15.2596)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_494" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7744, 0.476567, -6.0903)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_606" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9641, 0.476567, -4.82999)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_727" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1803, 0.476567, -8.99652)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_878" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.6646, 0.476567, -16.4657)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437400_949" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5089, 0.476567, -27.8689)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437401_044" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20801, 0.476567, -31.2055)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437407_136" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.86302, 0.476567, -31.6996)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437407_534" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4519, 0.476567, -50.0855)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437407_645" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6976, 0.476567, -53.6812)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437407_715" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5328, 0.476567, -74.087)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437407_883" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.517, 0.476567, -70.2637)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437408_37" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.7339, 0.476567, -25.6028)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437408_504" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.4298, 0.476567, -34.8367)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437408_57" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.9032, 0.476567, -42.3786)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437410_154" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.2368, 0.476567, -4.57179)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437410_271" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.2385, 0.476567, 1.20547)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437410_343" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.335, 0.476567, -0.185236)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437410_939" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4045, 0.476567, 36.8513)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437411_112" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.9547, 0.476567, 16.7598)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437411_283" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.523, 0.476567, 17.8849)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437411_372" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.6823, 0.476567, 26.9131)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437415_644" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0971, 0.476567, 39.9955)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437415_777" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.3566, 0.476567, 51.9384)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437415_825" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.6843, 0.476567, 52.5012)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437416_425" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.2357, 0.476567, 54.3128)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437416_51" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.7231, 0.476567, 46.5401)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437416_534" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0379, 0.476567, 54.3623)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437418_517" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.611, 0.476567, -36.2378)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437419_154" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.434, 0.476567, -58.4573)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437419_279" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.9173, 0.476567, -58.2053)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437419_395" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.9397, 0.476567, -71.733)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437421_151" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.029, 0.476567, -66.6958)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437421_297" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.6474, 0.476567, -70.9577)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437421_366" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6319, 0.476567, -85.5337)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437422_056" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1686, 0.476567, -56.7358)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437425_743" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7732, 0.476567, -66.4804)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437427_628" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4433, 0.476567, -40.8597)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437427_664" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1647, 0.476567, -36.0677)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437430_247" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8347, 0.476567, -65.9881)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437437_964" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.83003, 0.476567, -79.5328)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437440_209" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3454, 0.476567, -84.8887)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437440_379" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.1528, 0.476567, -104.81)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437442_212" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.6852, 0.476567, -116.112)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437444_353" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.7048, 0.476567, -107.013)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437446_798" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.651, 0.476567, -82.2242)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437458_935" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.043, 0.476567, -29.099)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437458_989" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.979, 0.476567, -21.7367)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437459_588" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.455, 0.476567, -20.8817)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437462_266" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.7319, 0.476567, 62.041)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437463_973" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2828, 0.476567, 117.26)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437464_095" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9812, 0.476567, 120.181)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437464_674" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.7129, 0.476567, 95.249)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437465_326" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.9486, 0.476567, 88.1063)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437465_461" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4529, 0.476567, 111.852)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437465_5" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0658, 0.476567, 112.146)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437466_91" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.38865, 0.476567, 101.287)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437466_948" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2197, 0.476567, 105.297)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437469_503" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.1907, 0.476567, 81.4418)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437485_129" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.1646, 0.476567, -40.8487)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437485_284" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.1071, 0.476567, -44.8658)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437485_612" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.124, 0.476567, -38.5311)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437486_856" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.2636, 0.476567, -19.4462)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437487_047" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.449, 0.476567, -14.455)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437488_613" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0042, 0.476567, 31.6566)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437488_722" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.6059, 0.476567, 24.8358)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437488_847" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4521, 0.476567, 9.49572)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437488_902" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.059, 0.476567, 7.1722)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437491_186" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.4671, 0.476567, 54.9746)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437491_268" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.28, 0.476567, 37.9293)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437491_322" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.119, 0.476567, 26.8026)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437491_387" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.781, 0.476567, 30.048)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437492_125" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.969, 0.476567, 72.0207)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437493_624" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.9846, 0.476567, 107.468)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437493_672" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.534, 0.476567, 108.691)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437493_781" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.589, 0.476567, 102.027)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437496_692" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.8818, 0.476567, 111.18)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437496_822" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1446, 0.476567, 119.112)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437501_878" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.784, 0.476567, -124.803)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437502_219" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.913, 0.476567, -140.48)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437504_185" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3371, 0.476567, -146.302)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437504_267" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.9841, 0.476567, -146.804)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437504_332" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.3154, 0.476567, -134.603)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437507_453" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5864, 0.476567, -135.562)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437509_176" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9272, 0.476567, -122.644)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437509_262" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8857, 0.476567, -118.213)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437511_571" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0679, 0.476567, -135.514)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437511_693" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0846, 0.476567, -146.33)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437513_143" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.6597, 0.476567, -137.49)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437513_301" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.912, 0.476567, -150.427)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437514_623" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.674, 0.476567, -122.877)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437514_673" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.44, 0.476567, -118.739)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437515_85" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9952, 0.476567, -98.0601)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437517_007" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.9767, 0.476567, -91.7915)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437517_112" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.59, 0.476567, -91.1342)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437518_487" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.3187, 0.476567, -64.5974)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437518_654" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.029, 0.476567, -69.5727)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437522_567" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.2372, 0.476567, -98.654)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437522_679" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5247, 0.476567, -99.6097)
+script = ExtResource("6_d5b4h")
+
+[node name="Brush_1706437628_122" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0424, 0.476567, -19.655)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437629_792" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8326, 0.476567, -43.5604)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437631_494" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9061, 0.476567, -58.3228)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437632_045" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.1816, 0.476567, -35.4881)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437633_612" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.0665, 0.476567, -0.983121)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437634_963" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.02, 0.476567, 55.4646)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437636_631" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.1995, 0.476567, 116.477)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437637_366" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.2654, 0.476567, 94.6302)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437638_667" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1096, 0.476567, 101.655)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437640_005" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.9843, 0.476567, 104.067)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437656_134" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.355, 0.476567, -2.92056)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437657_552" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.7942, 0.476567, -61.7527)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437659_206" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.804, 0.476567, -106.54)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437660_46" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.8607, 0.476567, -140.806)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437661_941" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9642, 0.476567, -111.818)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437663_427" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.5017, 0.476567, -108.603)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706437671_534" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.748, 0.476567, -83.8248)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437673_235" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.638, 0.476567, -77.6698)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437675_939" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5271, 0.476567, -72.3713)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437677_723" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1656, 0.476567, -101.104)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437679_642" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5639, 0.476567, -135.294)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437727_725" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.443888, 0, 0.896082, 0, 1, 0, -0.896082, 0, 0.443888, -100.227, 0.476567, -81.7443)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437729_966" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.496945, 0, -0.867782, 0, 1, 0, 0.867782, 0, -0.496945, -25.6923, 0.476567, -30.2823)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437734_501" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.286488, 0, -0.958084, 0, 1, 0, 0.958084, 0, -0.286488, 70.0195, 0.476567, -57.956)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437736_482" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.600357, 0, 0.799732, 0, 1, 0, -0.799732, 0, 0.600357, 57.6073, 0.476567, -124.982)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437739_207" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.998904, 0, 0.0468127, 0, 1, 0, -0.0468127, 0, -0.998904, 121.879, 0.476567, -52.2845)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437748_347" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.989855, 0, -0.142084, 0, 1, 0, 0.142084, 0, 0.989855, 108.795, 0.476567, -30.2053)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437763_493" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.48643, 0, 0.87372, 0, 1, 0, -0.87372, 0, 0.48643, 47.3967, 0.476567, 49.1081)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437765_528" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.873434, 0, 0.486943, 0, 1, 0, -0.486943, 0, 0.873434, -17.2524, 0.476567, 84.3174)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437768_031" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.0108726, 0, 0.999941, 0, 1, 0, -0.999941, 0, 0.0108726, 51.8153, 0.476567, 134.735)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437769_382" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.815818, 0, 0.578309, 0, 1, 0, -0.578309, 0, 0.815818, 52.8494, 0.476567, 122.281)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437772_888" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.166503, 0, 0.986041, 0, 1, 0, -0.986041, 0, -0.166503, -123.904, 0.476567, 96.9293)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437776_457" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.899015, 0, 0.437917, 0, 1, 0, -0.437917, 0, 0.899015, -115.286, 0.476567, -6.78289)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437782_696" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.892617, 0, 0.450815, 0, 1, 0, -0.450815, 0, 0.892617, -115.647, 0.476567, -105.055)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437785_836" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.606803, 0, -0.794852, 0, 1, 0, 0.794852, 0, -0.606803, -27.656, 0.476567, -153.149)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437789_869" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.703742, 0, -0.710456, 0, 1, 0, 0.710456, 0, -0.703742, 20.2676, 0.476567, -140.328)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437806_687" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.519819, 0, -0.854277, 0, 1, 0, 0.854277, 0, 0.519819, 48.5688, 0.476567, -100.199)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437816_713" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.706637, 0, 0.707576, 0, 1, 0, -0.707576, 0, -0.706637, -20.035, 0.476567, -14.5768)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706437821_387" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.892455, 0, -0.451136, 0, 1, 0, 0.451136, 0, -0.892455, -0.820004, 0.476567, -16.487)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437823_49" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.805871, 0, 0.592091, 0, 1, 0, -0.592091, 0, 0.805871, -53.7413, 0.476567, -52.7086)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437825_304" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.913776, 0, 0.406219, 0, 1, 0, -0.406219, 0, -0.913776, -80.4714, 0.476567, -92.7617)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437827_59" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.738429, 0, 0.674331, 0, 1, 0, -0.674331, 0, -0.738429, -119.835, 0.476567, -133.717)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437832_516" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.197303, 0, -0.980343, 0, 1, 0, 0.980343, 0, -0.197303, -56.9441, 0.476567, 24.46)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437835_052" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.663541, 0, 0.74814, 0, 1, 0, -0.74814, 0, -0.663541, -115.101, 0.476567, 85.838)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437836_901" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.716073, 0, -0.698025, 0, 1, 0, 0.698025, 0, -0.716073, -51.4092, 0.476567, 103.204)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437838_284" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.603984, 0, 0.796997, 0, 1, 0, -0.796997, 0, -0.603984, 2.50279, 0.476567, 100.885)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437840_421" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.833396, 0, -0.552676, 0, 1, 0, 0.552676, 0, 0.833396, -19.8556, 0.476567, 101.922)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437842_722" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.995485, 0, -0.0949153, 0, 1, 0, 0.0949153, 0, -0.995485, 38.2794, 0.476567, 85.5599)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437846_413" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.985571, 0, 0.169265, 0, 1, 0, -0.169265, 0, -0.985571, 84.9378, 0.476567, 30.8885)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437855_422" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.474201, 0, 0.880416, 0, 1, 0, -0.880416, 0, 0.474201, 72.4598, 0.476567, 43.9801)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437857_657" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.985067, 0, -0.172174, 0, 1, 0, 0.172174, 0, 0.985067, 94.9066, 0.476567, 77.0894)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437859_424" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.0985747, 0, -0.99513, 0, 1, 0, 0.99513, 0, -0.0985747, 71.3186, 0.476567, 120.33)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437862_06" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.936112, 0, -0.351701, 0, 1, 0, 0.351701, 0, -0.936112, 127.896, 0.476567, 120.796)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437864_279" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.163596, 0, -0.986527, 0, 1, 0, 0.986527, 0, 0.163596, 140.83, 0.476567, 72.2583)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706437866_446" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.641643, 0, -0.767003, 0, 1, 0, 0.767003, 0, -0.641643, 132.807, 0.476567, -1.83015)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438014_062" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.314941, 0, 0.949111, 0, 1, 0, -0.949111, 0, 0.314941, -103.125, 0.476567, -9.08754)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438015_465" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.895447, 0, 0.445168, 0, 1, 0, -0.445168, 0, -0.895447, -82.663, 0.476567, -44.602)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438016_933" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.759018, 0, 0.65107, 0, 1, 0, -0.65107, 0, -0.759018, -45.5171, 0.476567, -80.9944)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438018_334" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.554022, 0, -0.832502, 0, 1, 0, 0.832502, 0, 0.554022, -84.5, 0.476567, -103.171)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438019_768" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.8939, 0, -0.448267, 0, 1, 0, 0.448267, 0, -0.8939, -65.8005, 0.476567, -125.866)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438021_087" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.397474, 0, 0.917613, 0, 1, 0, -0.917613, 0, 0.397474, -19.1888, 0.476567, -140.296)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438022_224" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.581276, 0, -0.813706, 0, 1, 0, 0.813706, 0, 0.581276, 1.68704, 0.476567, -108.148)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438023_539" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.948355, 0, 0.31721, 0, 1, 0, -0.31721, 0, -0.948355, 38.3921, 0.476567, -58.0563)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438025_516" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.864698, 0, -0.502292, 0, 1, 0, 0.502292, 0, -0.864698, 90.3995, 0.476567, 4.22514)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438026_579" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.392476, 0, 0.919762, 0, 1, 0, -0.919762, 0, 0.392476, 68.031, 0.476567, -15.2574)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438027_429" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.33596, 0, -0.941876, 0, 1, 0, 0.941876, 0, 0.33596, 68.6733, 0.476567, -2.87216)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438029_48" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.445984, 0, 0.895041, 0, 1, 0, -0.895041, 0, 0.445984, 79.6867, 0.476567, 56.9014)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438030_799" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.631958, 0, 0.775002, 0, 1, 0, -0.775002, 0, -0.631958, 46.0067, 0.476567, 74.91)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438031_967" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.8738, 0, 0.486286, 0, 1, 0, -0.486286, 0, 0.8738, 28.9203, 0.476567, 88.1223)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438034_252" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.379074, 0, 0.925366, 0, 1, 0, -0.925366, 0, -0.379074, 34.8987, 0.476567, 120.569)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438035_618" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.39674, 0, 0.917931, 0, 1, 0, -0.917931, 0, 0.39674, 68.2889, 0.476567, 103.075)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438037_17" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.454446, 0, 0.890774, 0, 1, 0, -0.890774, 0, -0.454446, 121.059, 0.476567, 95.012)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438038_821" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.994964, 0, -0.100231, 0, 1, 0, 0.100231, 0, 0.994964, 127.477, 0.476567, 81.2028)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438040_073" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.995001, 0, -0.0998647, 0, 1, 0, 0.0998647, 0, 0.995001, 133.581, 0.476567, 61.633)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438041_658" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.299446, 0, -0.954113, 0, 1, 0, 0.954113, 0, -0.299446, 138.031, 0.476567, 45.865)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438043_362" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.985345, 0, -0.170573, 0, 1, 0, 0.170573, 0, -0.985345, 126.72, 0.476567, -7.71844)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438045_064" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.845537, 0, 0.533917, 0, 1, 0, -0.533917, 0, 0.845537, 135.595, 0.476567, -33.8411)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438046_562" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.149889, 0, -0.988703, 0, 1, 0, 0.988703, 0, -0.149889, 133.982, 0.476567, -57.7888)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438047_698" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.60228, 0, 0.798285, 0, 1, 0, -0.798285, 0, 0.60228, 111.958, 0.476567, -78.1431)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438049_081" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.109577, 0, -0.993978, 0, 1, 0, 0.993978, 0, 0.109577, 130.375, 0.476567, -107.405)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438051_234" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.999931, 0, -0.0117103, 0, 1, 0, 0.0117103, 0, -0.999931, 115.102, 0.476567, -135.664)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438052_785" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.206457, 0, -0.978456, 0, 1, 0, 0.978456, 0, -0.206457, 65.9043, 0.476567, -137.739)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438053_47" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.664036, 0, 0.747701, 0, 1, 0, -0.747701, 0, -0.664036, 75.0009, 0.476567, -128.609)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438057_523" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.971934, 0, 0.235254, 0, 1, 0, -0.235254, 0, 0.971934, -83.4483, 0.476567, 73.3628)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438058_96" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.263595, 0, 0.964633, 0, 1, 0, -0.964633, 0, 0.263595, -95.2419, 0.476567, 45.3918)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438061_181" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.790194, 0, 0.612857, 0, 1, 0, -0.612857, 0, 0.790194, -113.609, 0.476567, 9.67255)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438062_913" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.846977, 0, 0.53163, 0, 1, 0, -0.53163, 0, -0.846977, -73.4292, 0.476567, -11.1581)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438064_35" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(0.198758, 0, -0.980048, 0, 1, 0, 0.980048, 0, 0.198758, -76.081, 0.476567, -19.184)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438065_701" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_dfbq3")]
+transform = Transform3D(-0.354007, 0, -0.935243, 0, 1, 0, 0.935243, 0, -0.354007, -80.8433, 0.476567, -33.6005)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
+animationNameOnPlayerPresence = "AnvilAttack"
+damageDelay = 0.5
+damageOnAreaEnter = 15.0
+
+[node name="Brush_1706438073_257" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.383136, 0, -0.923692, 0, 1, 0, 0.923692, 0, 0.383136, -74.2577, 0.476567, -62.3181)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438081_032" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.59859, 0, -0.801055, 0, 1, 0, 0.801055, 0, -0.59859, -98.3687, 0.476567, 6.98332)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438082_817" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.0313459, 0, 0.999509, 0, 1, 0, -0.999509, 0, -0.0313459, -28.2924, 0.476567, 9.9523)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438085_318" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.652319, 0, 0.757944, 0, 1, 0, -0.757944, 0, -0.652319, 16.6908, 0.476567, -52.4951)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438086_586" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.619585, 0, 0.78493, 0, 1, 0, -0.78493, 0, 0.619585, 0.218565, 0.476567, -55.6513)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438088_194" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.984437, 0, -0.175737, 0, 1, 0, 0.175737, 0, 0.984437, -16.1411, 0.476567, -69.6469)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438090_14" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.813334, 0, -0.581798, 0, 1, 0, 0.581798, 0, -0.813334, -25.3761, 0.476567, -90.6089)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438091_625" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.32186, 0, 0.946787, 0, 1, 0, -0.946787, 0, 0.32186, -36.962, 0.476567, -109.838)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438092_742" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.896436, 0, -0.443173, 0, 1, 0, 0.443173, 0, 0.896436, -21.0565, 0.476567, -120.157)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438094_044" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.743568, 0, 0.66866, 0, 1, 0, -0.66866, 0, 0.743568, 5.49771, 0.476567, -136.876)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438095_698" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.702555, 0, 0.711629, 0, 1, 0, -0.711629, 0, -0.702555, 45.9067, 0.476567, -103.621)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438099_786" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.999952, 0, 0.00982405, 0, 1, 0, -0.00982405, 0, 0.999952, 85.7935, 0.476567, -113.107)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438102_169" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.713327, 0, -0.700831, 0, 1, 0, 0.700831, 0, -0.713327, 127.318, 0.476567, -66.3628)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438103_674" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.984335, 0, -0.176306, 0, 1, 0, 0.176306, 0, 0.984335, 72.091, 0.476567, -75.3387)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438106_091" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.720929, 0, -0.693009, 0, 1, 0, 0.693009, 0, 0.720929, 56.8397, 0.476567, -53.6868)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438107_341" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.651249, 0, 0.758864, 0, 1, 0, -0.758864, 0, -0.651249, 56.3084, 0.476567, -72.4663)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438109_578" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.691764, 0, -0.722123, 0, 1, 0, 0.722123, 0, 0.691764, 90.1712, 0.476567, -23.6511)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438111_148" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.816595, 0, 0.577211, 0, 1, 0, -0.577211, 0, 0.816595, 87.4427, 0.476567, -6.74982)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438113_197" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.896015, 0, 0.444024, 0, 1, 0, -0.444024, 0, -0.896015, 119.167, 0.476567, -2.2213)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438114_95" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.563802, 0, 0.82591, 0, 1, 0, -0.82591, 0, 0.563802, 129.755, 0.476567, 10.3996)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438138_793" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.0150418, 0, 0.999887, 0, 1, 0, -0.999887, 0, -0.0150418, -8.97327, 0.476567, 30.5325)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438142_143" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.472952, 0, -0.881088, 0, 1, 0, 0.881088, 0, 0.472952, -36.0934, 0.476567, 64.9262)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438145_065" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.845601, 0, 0.533815, 0, 1, 0, -0.533815, 0, 0.845601, -74.6835, 0.476567, 6.79408)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438150_536" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.923198, 0, -0.384324, 0, 1, 0, 0.384324, 0, 0.923198, -62.2328, 0.476567, -6.55424)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438152_471" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.658204, 0, 0.752839, 0, 1, 0, -0.752839, 0, -0.658204, -45.7172, 0.476567, -39.9903)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438154_423" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(0.716784, 0, 0.697295, 0, 1, 0, -0.697295, 0, 0.716784, -49.7807, 0.476567, -61.5892)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438156_576" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.723707, 0, -0.690108, 0, 1, 0, 0.690108, 0, -0.723707, -69.7581, 0.476567, -97.4499)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438158_709" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("10_unwhe")]
+transform = Transform3D(-0.679674, 0, 0.733514, 0, 1, 0, -0.733514, 0, -0.679674, -34.0851, 0.476567, -101.415)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("PufferTree/AnimationPlayer")
+animationNameOnPlayerPresence = "PufferAnimation"
+damageDelay = 0.5
+
+[node name="Brush_1706438186_705" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.955251, 0, 0.295796, 0, 1, 0, -0.295796, 0, 0.955251, -49.4954, 0.476567, -129.573)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438188_54" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.986728, 0, 0.162381, 0, 1, 0, -0.162381, 0, 0.986728, 11.2281, 0.476567, -132.522)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438190_029" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.943973, 0, -0.330023, 0, 1, 0, 0.330023, 0, 0.943973, 45.9666, 0.476567, -142.703)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438191_392" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.930734, 0, -0.365696, 0, 1, 0, 0.365696, 0, -0.930734, 52.7021, 0.476567, -110.334)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438192_663" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.858836, 0, 0.51225, 0, 1, 0, -0.51225, 0, -0.858836, 85.4966, 0.476567, -70.3319)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438193_863" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.999229, 0, 0.0392652, 0, 1, 0, -0.0392652, 0, 0.999229, 97.2365, 0.476567, -47.65)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438195_213" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.00714575, 0, 0.999974, 0, 1, 0, -0.999974, 0, -0.00714575, 130.242, 0.476567, -26.1798)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438196_449" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.418913, 0, -0.908026, 0, 1, 0, 0.908026, 0, -0.418913, 135.428, 0.476567, -36.1492)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438199_785" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.993909, 0, -0.110208, 0, 1, 0, 0.110208, 0, -0.993909, 97.2378, 0.476567, 19.9416)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438201_404" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.106691, 0, 0.994292, 0, 1, 0, -0.994292, 0, -0.106691, 117.553, 0.476567, 53.7937)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438202_941" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.673695, 0, -0.73901, 0, 1, 0, 0.73901, 0, -0.673695, 116.956, 0.476567, 73.0611)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438204_422" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.69283, 0, 0.721101, 0, 1, 0, -0.721101, 0, 0.69283, 113.92, 0.476567, 92.6445)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438205_613" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.202962, 0, -0.979187, 0, 1, 0, 0.979187, 0, 0.202962, 82.3328, 0.476567, 92.5675)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438207_21" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.183733, 0, 0.982976, 0, 1, 0, -0.982976, 0, -0.183733, 80.412, 0.476567, 107.246)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438208_563" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.986555, 0, -0.163431, 0, 1, 0, 0.163431, 0, -0.986555, 65.3606, 0.476567, 111.269)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438210_114" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.701884, 0, -0.712292, 0, 1, 0, 0.712292, 0, 0.701884, 46.9994, 0.476567, 100.226)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438211_546" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.421977, 0, -0.906607, 0, 1, 0, 0.906607, 0, -0.421977, 19.6399, 0.476567, 110.828)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438214_034" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.999676, 0, 0.0254665, 0, 1, 0, -0.0254665, 0, -0.999676, 1.58444, 0.476567, 125.805)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438214_669" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.677237, 0, 0.735765, 0, 1, 0, -0.735765, 0, 0.677237, -14.6186, 0.476567, 106.556)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438216_136" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.895909, 0, 0.444237, 0, 1, 0, -0.444237, 0, 0.895909, -30.3433, 0.476567, 110.949)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438217_786" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.836612, 0, 0.547796, 0, 1, 0, -0.547796, 0, 0.836612, -54.8181, 0.476567, 119.542)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438220_575" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.998285, 0, 0.0585328, 0, 1, 0, -0.0585328, 0, 0.998285, -79.0709, 0.476567, 107.533)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438221_49" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(1, 0, 0.00090454, 0, 1, 0, -0.00090454, 0, 1, -61.3899, 0.476567, 106.12)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438223_224" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.468348, 0, -0.883544, 0, 1, 0, 0.883544, 0, 0.468348, -115.61, 0.476567, 101.684)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438224_125" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.751765, 0, 0.659431, 0, 1, 0, -0.659431, 0, -0.751765, -105.33, 0.476567, 116.554)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438225_68" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.87204, 0, 0.489435, 0, 1, 0, -0.489435, 0, 0.87204, -104.412, 0.476567, 93.3333)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438227_262" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.918199, 0, 0.396119, 0, 1, 0, -0.396119, 0, -0.918199, -107.291, 0.476567, 69.2064)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438228_68" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.779715, 0, 0.626135, 0, 1, 0, -0.626135, 0, -0.779715, -120.274, 0.476567, 49.4233)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438229_784" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.355362, 0, -0.934729, 0, 1, 0, 0.934729, 0, -0.355362, -111.901, 0.476567, 31.8529)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438230_852" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.343348, 0, -0.939208, 0, 1, 0, 0.939208, 0, -0.343348, -115.549, 0.476567, 20.1791)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438230_909" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.282628, 0, 0.95923, 0, 1, 0, -0.95923, 0, 0.282628, -125.034, 0.476567, 25.8351)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438232_885" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.399633, 0, 0.916675, 0, 1, 0, -0.916675, 0, 0.399633, -91.9635, 0.476567, 16.5357)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438234_188" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.37996, 0, -0.925003, 0, 1, 0, 0.925003, 0, -0.37996, -68.7869, 0.476567, 12.2306)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438235_571" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.638931, 0, -0.769264, 0, 1, 0, 0.769264, 0, -0.638931, -59.804, 0.476567, 6.93801)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438238_908" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.315548, 0, 0.94891, 0, 1, 0, -0.94891, 0, -0.315548, -38.7996, 0.476567, -38.9721)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438240_128" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.95108, 0, -0.308945, 0, 1, 0, 0.308945, 0, -0.95108, -45.5867, 0.476567, -56.8531)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438242_532" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.877066, 0, -0.480371, 0, 1, 0, 0.480371, 0, 0.877066, -65.4469, 0.476567, -87.9268)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438243_979" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.217386, 0, -0.976086, 0, 1, 0, 0.976086, 0, -0.217386, -49.8381, 0.476567, -101.104)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438245_282" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.58271, 0, 0.81268, 0, 1, 0, -0.81268, 0, -0.58271, -56.2794, 0.476567, -122.811)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438246_549" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.428313, 0, 0.90363, 0, 1, 0, -0.90363, 0, -0.428313, -79.0744, 0.476567, -131.983)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438248_419" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.918538, 0, 0.395333, 0, 1, 0, -0.395333, 0, -0.918538, -92.1568, 0.476567, -143.216)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438250_522" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.783383, 0, -0.621539, 0, 1, 0, 0.621539, 0, -0.783383, -18.1452, 0.476567, -112.102)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438251_954" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.93993, 0, 0.341366, 0, 1, 0, -0.341366, 0, 0.93993, -13.2142, 0.476567, -125.885)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438253_774" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.175259, 0, -0.984522, 0, 1, 0, 0.984522, 0, -0.175259, 24.091, 0.476567, -87.7751)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438254_641" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.112854, 0, -0.993612, 0, 1, 0, 0.993612, 0, 0.112854, 5.15298, 0.476567, -94.3116)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438256_463" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.999852, 0, 0.0171952, 0, 1, 0, -0.0171952, 0, -0.999852, -0.825004, 0.476567, -83.3724)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438257_845" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.986994, 0, -0.16076, 0, 1, 0, 0.16076, 0, 0.986994, -16.766, 0.476567, -80.7501)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438271_376" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(-0.088093, 0, 0.996112, 0, 1, 0, -0.996112, 0, -0.088093, 52.3453, 0.476567, -84.8867)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438273_277" type="Node3D" parent="Brush" instance=ExtResource("9_md84u")]
+transform = Transform3D(0.402468, 0, -0.915434, 0, 1, 0, 0.915434, 0, 0.402468, 87.2868, 0.476567, -79.7137)
+script = ExtResource("6_d5b4h")
+damageDelay = 0.5
+
+[node name="Brush_1706438401_641" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.167602, 0, 0.985855, 0, 1, 0, -0.985855, 0, 0.167602, 59.4931, 0.476567, -31.6439)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438403_276" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.684779, 0, -0.728751, 0, 1, 0, 0.728751, 0, -0.684779, 49.2023, 0.476567, -46.6359)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438404_658" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.987237, 0, -0.159256, 0, 1, 0, 0.159256, 0, 0.987237, 45.9238, 0.476567, -73.2791)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438406_011" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.627119, 0, -0.778923, 0, 1, 0, 0.778923, 0, 0.627119, 72.1129, 0.476567, -88.3115)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438407_782" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.731152, 0, -0.682214, 0, 1, 0, 0.682214, 0, 0.731152, 88.1253, 0.476567, -98.0881)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438409_297" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.49566, 0, -0.868517, 0, 1, 0, 0.868517, 0, 0.49566, 111.04, 0.476567, -113.832)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438411_236" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.390684, 0, 0.920525, 0, 1, 0, -0.920525, 0, -0.390684, 105.114, 0.476567, -134.818)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438412_633" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.105081, 0, -0.994464, 0, 1, 0, 0.994464, 0, 0.105081, 33.5747, 0.476567, -118.607)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438414_037" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.996609, 0, 0.0822859, 0, 1, 0, -0.0822859, 0, 0.996609, -7.33832, 0.476567, -100.542)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438415_487" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.999219, 0, 0.0395125, 0, 1, 0, -0.0395125, 0, -0.999219, 1.43303, 0.476567, -124.407)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438418_676" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.142882, 0, 0.98974, 0, 1, 0, -0.98974, 0, 0.142882, -29.7728, 0.476567, -40.7242)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438419_876" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.699751, 0, -0.714386, 0, 1, 0, 0.714386, 0, -0.699751, -56.8121, 0.476567, -25.792)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438421_444" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.833156, 0, -0.553038, 0, 1, 0, 0.553038, 0, 0.833156, -57.1894, 0.476567, -1.91542)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438423_144" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.915624, 0, 0.402036, 0, 1, 0, -0.402036, 0, 0.915624, -35.6041, 0.476567, 43.3281)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438424_864" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.848452, 0, -0.529273, 0, 1, 0, 0.529273, 0, 0.848452, -9.76639, 0.476567, 40.6601)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438426_532" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.9726, 0, 0.232484, 0, 1, 0, -0.232484, 0, 0.9726, 28.9032, 0.476567, 22.6968)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438428_785" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.0672165, 0, 0.997738, 0, 1, 0, -0.997738, 0, -0.0672165, 30.7042, 0.476567, 54.8406)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438430_752" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.342683, 0, 0.939451, 0, 1, 0, -0.939451, 0, 0.342683, 75.6254, 0.476567, 36.4111)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438432_369" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.444841, 0, 0.895609, 0, 1, 0, -0.895609, 0, -0.444841, 84.9629, 0.476567, 50.6189)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438433_822" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.402925, 0, 0.915233, 0, 1, 0, -0.915233, 0, -0.402925, 118.939, 0.476567, 34.3551)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438435_124" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.0315642, 0, 0.999502, 0, 1, 0, -0.999502, 0, -0.0315642, 136.346, 0.476567, 19.5744)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438436_692" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.467316, 0, -0.88409, 0, 1, 0, 0.88409, 0, 0.467316, 122.097, 0.476567, -13.3884)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438439_043" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.0324251, 0, 0.999474, 0, 1, 0, -0.999474, 0, -0.0324251, 110.878, 0.476567, -60.653)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438441_263" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.806328, 0, 0.591469, 0, 1, 0, -0.591469, 0, -0.806328, 73.2616, 0.476567, -71.9972)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438443_284" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.855956, 0, -0.517048, 0, 1, 0, 0.517048, 0, 0.855956, 43.652, 0.476567, -88.8338)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438444_533" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.881855, 0, 0.47152, 0, 1, 0, -0.47152, 0, -0.881855, 14.1273, 0.476567, -103.342)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438446_518" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.47447, 0, -0.880272, 0, 1, 0, 0.880272, 0, 0.47447, -32.2775, 0.476567, -117.936)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438447_719" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.980431, 0, 0.196865, 0, 1, 0, -0.196865, 0, -0.980431, -27.4276, 0.476567, -149.332)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438449_672" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.519672, 0, -0.854366, 0, 1, 0, 0.854366, 0, 0.519672, 48.7994, 0.476567, -130.218)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438451_188" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.0598421, 0, 0.998208, 0, 1, 0, -0.998208, 0, 0.0598421, 93.1454, 0.476567, -126.77)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438452_325" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.974884, 0, -0.222714, 0, 1, 0, 0.222714, 0, 0.974884, 131.563, 0.476567, -132.007)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438453_592" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.935637, 0, -0.352964, 0, 1, 0, 0.352964, 0, -0.935637, 119.224, 0.476567, -140.814)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438457_134" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.605109, 0, 0.796143, 0, 1, 0, -0.796143, 0, 0.605109, -41.0489, 0.476567, 89.6357)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438458_465" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.873023, 0, -0.487679, 0, 1, 0, 0.487679, 0, 0.873023, 4.1058, 0.476567, 83.3716)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438459_598" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.059012, 0, -0.998257, 0, 1, 0, 0.998257, 0, 0.059012, 51.55, 0.476567, 85.2245)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438461_202" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(0.942478, 0, -0.334267, 0, 1, 0, 0.334267, 0, 0.942478, 86.6884, 0.476567, 91.3813)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
+
+[node name="Brush_1706438462_351" type="Node3D" parent="Brush" node_paths=PackedStringArray("animationPlayer") instance=ExtResource("12_6vaq6")]
+transform = Transform3D(-0.880762, 0, -0.47356, 0, 1, 0, 0.47356, 0, -0.880762, 119.873, 0.476567, 93.8658)
+script = ExtResource("6_d5b4h")
+animationPlayer = NodePath("SniperTree/AnimationPlayer")
+animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
+damageOnAreaEnter = 25.0
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.92386, -0.631518, -9.21391)
@@ -131,24 +2065,39 @@ shape = SubResource("BoxShape3D_u2gus")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -145.926, -80.3714, 2.29416)
 shape = SubResource("BoxShape3D_u2gus")
 
+[node name="Deer2" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.008, 2.09924, 52.9039)
+shootOrigin = NodePath("../Deer/ejector")
+
+[node name="Deer5" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4139, 8.39696, -111.285)
+shootOrigin = NodePath("../Deer/ejector")
+
+[node name="Deer4" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9315, 4.19848, -35.6548)
+shootOrigin = NodePath("../Deer/ejector")
+
+[node name="Deer3" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.1893, 2.09924, -30.3944)
+shootOrigin = NodePath("../Deer/ejector")
+
 [node name="Deer" parent="." instance=ExtResource("10_4p7uo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 1.04962, -15.2589)
 
+[node name="Rabbit2" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.949, 1.98108, 83.1327)
+shootOrigin = NodePath("../Rabbit/ejector")
+
+[node name="Rabbit4" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0023, 2.97162, 111.25)
+shootOrigin = NodePath("../Rabbit/ejector")
+
+[node name="Rabbit3" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.7184, 1.98108, 42.4522)
+shootOrigin = NodePath("../Rabbit/ejector")
+
 [node name="Rabbit" parent="." instance=ExtResource("11_1gb1w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1621, 0.99054, 14.6151)
-
-[node name="Tree" parent="." instance=ExtResource("11_rk4it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41998, -1.1663, -6.38694)
-
-[node name="Node3D" parent="." instance=ExtResource("12_6vaq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406984, 4.76837e-07, 1.22873)
-
-[node name="Puffer_Tree" parent="." instance=ExtResource("10_unwhe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.38322)
-
-[node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3907, 0.315224, 3.94893)
-damageDelay = 0.8
 
 [node name="Truck" parent="." instance=ExtResource("14_02hsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419895, 11.3485)

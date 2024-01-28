@@ -10,6 +10,7 @@ size = Vector3(7.16245, 1, 3.17383)
 script = ExtResource("1_2c0m8")
 animationPlayer = NodePath("SniperTree/AnimationPlayer")
 animationNameOnPlayerPresence = "SniperAnim"
+damageDelay = 0.5
 damageOnAreaEnter = 25.0
 
 [node name="SniperTree" parent="." instance=ExtResource("1_hik2b")]
