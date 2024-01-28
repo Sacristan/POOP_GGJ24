@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cexjjyukf012l"]
+[gd_scene load_steps=6 format=3 uid="uid://cexjjyukf012l"]
 
 [ext_resource type="Script" path="res://src/Rabbit.gd" id="1_v8yks"]
 [ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="2_rf1yl"]
 [ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="2_v01kv"]
+[ext_resource type="AudioStream" uid="uid://bt6domkasbeth" path="res://audio/sleeping_animal.ogg" id="4_7u7si"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hnng4"]
 
@@ -24,3 +25,7 @@ avoidance_enabled = true
 
 [node name="ejector" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.613209)
+
+[node name="snoringSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_7u7si")
+max_distance = 20.0
