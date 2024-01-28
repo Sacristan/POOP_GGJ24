@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1g67rsbpx4gn"]
+
+[ext_resource type="Script" path="res://src/briefing.gd" id="1_obtnq"]
+
+[node name="Briefing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_obtnq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="briefingtext" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = 58.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "MISSION ASSIGNMENT...
+
+ALERT! A CONCERNED CITIZEN HAS MADE OURSELVES AWARE OF A PROBLEM
+
+---BRIEFING START---
+HELLO, SPECIAL AGENT!
+
+WE ARE AWARE OF BUNCH OF CRIMINAL ANIMALS LITTERING FOREST WITH  [color=red]POOP[/color]
+
+ASSIGNMENT:
+* [color=cyan]COLLECT[/color] ALL POOP
+* [color=cyan]DELIVER[/color] POOP TO TRUCK
+* [color=cyan]PACIFY[/color] ALL ANIMALS
+
+---BRIEFING END---
+
+[color=red]CONTROLS:[/color]
+WASD - MOVE
+LEFT MOUSE - EXTRACT POOP / PACIFY ANIMALS
+RIGHT MOUSE - EJECT POOP
+
+PRESS [color=red]ESC[/color] to CONTINUE
+"
