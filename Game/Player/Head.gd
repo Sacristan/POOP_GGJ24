@@ -26,6 +26,9 @@ func _input(event: InputEvent) -> void:
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
+	if(Global.freezeGameState):
+		return
+	
 	var joystick_axis := Input.get_vector(&"look_left", &"look_right",
 			&"look_down", &"look_up")
 	
