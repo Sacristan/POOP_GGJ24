@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm8pof2t54o17"]
+
+[ext_resource type="LabelSettings" uid="uid://b5x5pge4hfl5d" path="res://fonts/font.tres" id="1_4mfxt"]
+[ext_resource type="Script" path="res://src/menu.gd" id="1_cdc3o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lljsp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dvwat"]
+line_spacing = 5.0
+font_size = 30
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Node3D"]
+script = ExtResource("1_cdc3o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.46433)
+mesh = SubResource("BoxMesh_lljsp")
+
+[node name="MenuUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MenuUI"]
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 421.0
+offset_bottom = 257.0
+
+[node name="Label" type="Label" parent="MenuUI/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "P.O.O.P."
+label_settings = ExtResource("1_4mfxt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MenuUI/Control/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Quit" type="Button" parent="MenuUI/Control/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Control3" type="Control" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_right = 280.0
+offset_bottom = -30.0
+grow_vertical = 0
+
+[node name="instructions2" type="Label" parent="MenuUI/Control3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 44.0
+offset_top = -16.0
+offset_right = 102.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Animal Instructions
+LMouse - pacify"
+label_settings = SubResource("LabelSettings_dvwat")
+
+[node name="Control2" type="Control" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -338.0
+offset_top = -180.0
+offset_right = -58.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="instructions2" type="Label" parent="MenuUI/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -366.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Poop Instructions
+LMouse - extract
+RMouse - eject"
+label_settings = SubResource("LabelSettings_dvwat")
+horizontal_alignment = 2

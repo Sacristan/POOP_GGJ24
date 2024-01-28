@@ -9,7 +9,6 @@ extends Node
 
 var playerInArea := false
 
-
 func _ready():
 	self.area.body_entered.connect(areaEntered)
 	self.area.body_exited.connect(areaExited)

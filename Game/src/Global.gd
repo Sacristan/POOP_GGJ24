@@ -68,6 +68,19 @@ func poopSpawned(poop: Shit):
 	gm.cleanPoopsies()
 	onPoopsiesChanged.emit()
 
+const gameScenePath = "res://Levels/Main/Main.tscn"
+const menuScenePath = "res://scenes/menu.tscn"
+const briefingScenePath = "res://scenes/briefing.tscn"
+
+func launchBriefing():
+	get_tree().change_scene_to_file(briefingScenePath)
+	
+func launchGame():
+	get_tree().change_scene_to_file(gameScenePath)
+
+func launchMenu():
+	get_tree().change_scene_to_file(menuScenePath)
+
 func quitGame():
 	get_tree().quit()
 	
