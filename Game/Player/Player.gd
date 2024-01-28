@@ -28,7 +28,7 @@ func add_damage(damage: float):
 	
 	onDamageReceived.emit(health)
 	
-	if(health <= 0):
+	if(health <= 0.001):
 		die()
 
 func die():

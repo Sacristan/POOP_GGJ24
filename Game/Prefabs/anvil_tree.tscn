@@ -12,6 +12,7 @@ script = ExtResource("2_jyaql")
 animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
 animationNameOnPlayerPresence = "AnvilAttack"
 damageDelay = 2.5
+damageOnAreaEnter = 100.0
 
 [node name="TreeAnvil" parent="." instance=ExtResource("1_hcxx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
