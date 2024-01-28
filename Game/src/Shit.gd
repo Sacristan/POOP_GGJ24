@@ -14,6 +14,7 @@ func _ready():
 
 func poopOut(dir: Vector3, force: float):
 	eject(dir, force)
+	pass
 
 func playSFX():
 	audio.stream = Global.randomArrayItem(poopClips)

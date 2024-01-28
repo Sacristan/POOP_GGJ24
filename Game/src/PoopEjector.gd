@@ -10,6 +10,7 @@ var fwd_dir : Vector3 :
 		return shootOrigin.global_transform.basis.z
 
 func ejectPoop():
+	print(name)
 	var poop := projectile.instantiate()
 	getDetachNode().add_child(poop)
 	poop.global_position = shootOrigin.global_position

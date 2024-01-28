@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="P.O.O.P."
-run/main_scene="res://Levels/Main/Main.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 

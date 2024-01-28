@@ -121,10 +121,12 @@ func walkLoop():
 func poopLoop():
 	while(!isDead):
 		await wait(poopTimeout()).timeout
-		poop()
+		
+		if(!isDead):
+			poop()
 
 func poop():
-	ejectPoop()
+	super.ejectPoop()
 
 func walkTimeout():
 	randomize()

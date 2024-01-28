@@ -1143,45 +1143,35 @@ shape = SubResource("BoxShape3D_u2gus")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -145.926, -80.3714, 2.29416)
 shape = SubResource("BoxShape3D_u2gus")
 
-[node name="Deer2" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.008, 2.09924, 52.9039)
-shootOrigin = NodePath("../Deer/ejector")
-
-[node name="Deer5" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4139, 8.39696, -111.285)
-shootOrigin = NodePath("../Deer/ejector")
-
-[node name="Deer4" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9315, 4.19848, -35.6548)
-shootOrigin = NodePath("../Deer/ejector")
-
-[node name="Deer3" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("10_4p7uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.1893, 2.09924, -30.3944)
-shootOrigin = NodePath("../Deer/ejector")
-
-[node name="Deer" parent="." instance=ExtResource("10_4p7uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 1.08618, -15.2589)
-
-[node name="Rabbit2" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.949, 1.20893, 83.1327)
-shootOrigin = NodePath("../Rabbit/ejector")
-
-[node name="Rabbit4" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0023, 0.949413, 111.25)
-shootOrigin = NodePath("../Rabbit/ejector")
-
-[node name="Rabbit3" parent="." node_paths=PackedStringArray("shootOrigin") instance=ExtResource("11_1gb1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.7184, 0.994491, 42.4522)
-shootOrigin = NodePath("../Rabbit/ejector")
-
-[node name="Rabbit" parent="." instance=ExtResource("11_1gb1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1621, 0.99054, 14.6151)
-
 [node name="Truck" parent="." instance=ExtResource("14_02hsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419895, 11.3485)
 
 [node name="ShitCatcher" parent="." instance=ExtResource("17_olcdk")]
 
 [node name="Audio" parent="." instance=ExtResource("18_2f87n")]
+
+[node name="Deer" parent="." instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.4701, 1.1196, -38.1753)
+
+[node name="Deer2" parent="." instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5839, 0.942246, -32.8832)
+
+[node name="Deer3" parent="." instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5517, 0.975243, 90.6305)
+
+[node name="Rabbit" parent="." instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8909, 0.980909, 62.5279)
+
+[node name="Rabbit2" parent="." instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.9968, 0.963256, 11.7689)
+
+[node name="Rabbit3" parent="." instance=ExtResource("11_1gb1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.8213, 0.922175, 64.5172)
+
+[node name="Deer4" parent="." instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.268, 1.06947, 15.0746)
+
+[node name="Deer5" parent="." instance=ExtResource("10_4p7uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1728, 1.07485, 20.6977)
 
 [editable path="NavigationRegion3D/Platform"]
