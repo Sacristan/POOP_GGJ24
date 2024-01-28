@@ -11,19 +11,21 @@ signal onAnimalPacified
 signal onGameLost
 signal onGameWon
 
-var isGameEnding:=false
+var freezeGameState: bool:
+	get:
+		return player.isDead || gm.isGameEnding
 
 func checkIfGameWon():
-	if(!isGameEnding && hasGameBeenWon()):
-		isGameEnding = true
+	if(!gm.isGameEnding && hasGameBeenWon()):
+		gm.isGameEnding = true
 		print("gameWon")
 		onGameWon.emit()
 		await Global.wait(2)
 		Global.retryGame()
 
 func gameLost():
-	if(!isGameEnding):
-		isGameEnding = true
+	if(!gm.isGameEnding):
+		gm.isGameEnding = true
 		print("gameLost")
 		onGameLost.emit()
 		await Global.wait(2)

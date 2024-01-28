@@ -10,6 +10,8 @@ var poopsiesRemoved: int = 0
 var totalAnimals := 0
 var animalsPacified := 0
 
+var isGameEnding:=false
+
 func cleanPoopsies():
 	poopsies = Global.clean_array(poopsies)
 
@@ -26,6 +28,9 @@ func _ready() -> void:
 		print("** 'Esc' to close 'Shift + F1' to release mouse **")
 	
 	set_process_input(fast_close)
+	
+	await get_tree().physics_frame
+	Global.player.onDied.connect(Global.gameLost)
 	
 	while(true):
 		await Global.wait(1)
