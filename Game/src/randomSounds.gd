@@ -8,13 +8,10 @@ extends AudioStreamPlayer
 func _ready():
 	while(true):
 		await Global.wait(getDelay())
-		stream = randomClip()
+		stream = Global.randomArrayItem(clips)
 		play()
 		await finished
 		
-func randomClip():
-	return clips[randi() % clips.size()]
-	
 func getDelay():
 	randomize()
 	return randf_range(minDelay, maxDelay)

@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://byqgfx3o6jt4p"]
+[gd_scene load_steps=10 format=3 uid="uid://byqgfx3o6jt4p"]
 
 [ext_resource type="Script" path="res://src/Shit.gd" id="1_rbqmg"]
+[ext_resource type="AudioStream" uid="uid://cbmnaoeg338j6" path="res://audio/poop_01.wav" id="2_8c0yo"]
 [ext_resource type="PackedScene" uid="uid://dnfx6l3vngqlo" path="res://Models/Shit/shitprojectile.glb" id="2_ims3r"]
+[ext_resource type="AudioStream" uid="uid://csl1gcvnh5nrq" path="res://audio/poop_02.wav" id="3_g7p4g"]
+[ext_resource type="AudioStream" uid="uid://ncmtr1qtfnd7" path="res://audio/poop_03.wav" id="4_uyjqg"]
+[ext_resource type="AudioStream" uid="uid://cy4qocwyytkng" path="res://audio/poop_04.wav" id="5_kx8wm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w72hk"]
 
@@ -13,6 +17,7 @@
 collision_layer = 16
 collision_mask = 40
 script = ExtResource("1_rbqmg")
+poopClips = Array[AudioStream]([ExtResource("2_8c0yo"), ExtResource("3_g7p4g"), ExtResource("4_uyjqg"), ExtResource("5_kx8wm")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_w72hk")
@@ -32,3 +37,6 @@ collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trigger"]
 shape = SubResource("BoxShape3D_md2o5")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+max_distance = 10.0

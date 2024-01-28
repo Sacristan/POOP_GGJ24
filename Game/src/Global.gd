@@ -102,3 +102,6 @@ func clean_array(dirty_array: Array) -> Array:
 		if is_instance_valid(item):
 			cleaned_array.push_back(item)
 	return cleaned_array
+	
+func randomArrayItem(array):
+	return array[randi() % array.size()]

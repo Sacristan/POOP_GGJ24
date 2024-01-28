@@ -3,14 +3,21 @@ class_name Shit
 
 @onready var timer: Timer = $"Timer"
 @onready var area :Area3D = $"Trigger"
+@onready var audio: AudioStreamPlayer3D = $"AudioStreamPlayer3D"
 
 var isExtracting := false
+
+@export var poopClips: Array[AudioStream]
 
 func _ready():
 	self.area.body_entered.connect(areaEntered)
 
 func poopOut(dir: Vector3, force: float):
 	eject(dir, force)
+
+func splaySFX():
+	audio.stream = Global.randomArrayItem(poopClips)
+	audio.play()
 
 func extract(dir: Vector3, force: float):
 	isExtracting = true
@@ -24,6 +31,7 @@ func eject(dir: Vector3, force: float):
 	
 func fire(dir: Vector3, force: float):
 	apply_impulse(dir * force)
+	splaySFX()
 	
 func cleanup(time: float):
 	timer.wait_time = time
