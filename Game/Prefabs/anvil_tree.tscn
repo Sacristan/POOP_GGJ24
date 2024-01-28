@@ -11,8 +11,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50058, 1.33755, 0.192295)
 script = ExtResource("2_jyaql")
 animationPlayer = NodePath("TreeAnvil/AnimationPlayer")
 animationNameOnPlayerPresence = "AnvilAttack"
-damageDelay = 2.5
-damageOnAreaEnter = 100.0
 
 [node name="TreeAnvil" parent="." instance=ExtResource("1_hcxx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
@@ -20,19 +18,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415476, -0.17329, 0.36229)
 [node name="Skeleton3D" parent="TreeAnvil/Armature" index="0"]
 bones/2/rotation = Quaternion(0.83161, -0.0502273, -0.0752706, 0.547938)
 bones/2/scale = Vector3(1, 1, 1)
-bones/3/rotation = Quaternion(0.0125435, -0.00440324, -0.0219131, 0.999672)
+bones/3/rotation = Quaternion(0.0125435, -0.00440325, -0.0219131, 0.999672)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/rotation = Quaternion(0.0125702, -4.52347e-05, 0.0120838, 0.999848)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/rotation = Quaternion(0.904076, -0.0335672, 0.175367, -0.388287)
 bones/5/scale = Vector3(1, 1, 1)
-bones/6/rotation = Quaternion(-0.0097099, 0.0114833, -0.0173344, 0.999737)
+bones/6/rotation = Quaternion(-0.00970992, 0.0114833, -0.0173344, 0.999737)
+bones/6/scale = Vector3(1, 1, 1)
 bones/7/rotation = Quaternion(-0.014785, 0.00010813, 0.0413517, 0.999035)
 bones/8/rotation = Quaternion(-0.0103188, -5.26498e-06, 0.000480432, 0.999947)
 bones/8/scale = Vector3(1, 1, 1)
 bones/9/rotation = Quaternion(-0.00263009, -1.8899e-05, 0.00151434, 0.999995)
-bones/10/rotation = Quaternion(-0.0026301, -1.88897e-05, 0.00151438, 0.999995)
+bones/10/position = Vector3(0.486241, 9.02463, 0.232465)
+bones/10/rotation = Quaternion(-0.00263009, -1.88897e-05, 0.00151438, 0.999995)
 bones/11/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+
+[node name="AnimationPlayer" parent="TreeAnvil" index="1"]
+speed_scale = 2.5
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 3

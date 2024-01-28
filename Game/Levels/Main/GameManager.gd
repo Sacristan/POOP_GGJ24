@@ -10,6 +10,9 @@ var poopsiesRemoved: int = 0
 var totalAnimals := 0
 var animalsPacified := 0
 
+func cleanPoopsies():
+	poopsies = Global.clean_array(poopsies)
+
 func _ready() -> void:
 	Global.gm = self
 	
@@ -23,6 +26,10 @@ func _ready() -> void:
 		print("** 'Esc' to close 'Shift + F1' to release mouse **")
 	
 	set_process_input(fast_close)
+	
+	while(true):
+		await Global.wait(1)
+		Global.checkIfGameWon()
 
 func _process(delta):
 	currentTime+=delta

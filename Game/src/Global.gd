@@ -31,7 +31,7 @@ func gameLost():
 
 func hasGameBeenWon() -> bool:
 	var allAnimalsPacified := gm.animalsPacified >= gm.totalAnimals
-	var noPoopsiesInForest := gm.poopsies.size() >= 0
+	var noPoopsiesInForest := gm.poopsies.size() <= 0
 	var noPoopInStash := poopGun.poopPool <= 0
 	
 	return allAnimalsPacified && noPoopsiesInForest && noPoopInStash
@@ -50,15 +50,20 @@ func retryGame():
 func poopsiesDelivered(poop: Shit):
 	gm.poopsiesRemoved +=1
 	gm.poopsies.erase(poop)
+	gm.cleanPoopsies()
+	
 	onPoopsiesChanged.emit()
 	checkIfGameWon()
 
 func poopRemoved(poop: Shit):
 	gm.poopsies.erase(poop)
+	gm.cleanPoopsies()
+	
 	onPoopsiesChanged.emit()
 	
 func poopSpawned(poop: Shit):
 	gm.poopsies.append(poop)
+	gm.cleanPoopsies()
 	onPoopsiesChanged.emit()
 
 func quitGame():
@@ -75,3 +80,10 @@ func getCurrentSceneName():
 
 func wait(time):
 	return get_tree().create_timer(time, false).timeout
+	
+func clean_array(dirty_array: Array) -> Array:
+	var cleaned_array = []
+	for item in dirty_array:
+		if is_instance_valid(item):
+			cleaned_array.push_back(item)
+	return cleaned_array
