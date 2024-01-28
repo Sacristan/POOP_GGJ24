@@ -25,6 +25,8 @@ func extract():
 	if(result.hitEligibleTarget):
 		if(result.obj is Shit):
 			extractPoop(result.obj)
+			
+			extractSFX.pitch_scale = randf_range(0.6, 1.4)
 			extractSFX.play()
 			
 		elif(result.obj is Animal):
@@ -32,6 +34,8 @@ func extract():
 	
 func eject():
 	if(poopPool > 0):
+		
+		ejectSFX.pitch_scale = randf_range(0.6, 1.4)
 		ejectSFX.play()
 		ejectPoop()
 		onEjected.emit()
