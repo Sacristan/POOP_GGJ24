@@ -26,4 +26,6 @@ shape = SubResource("BoxShape3D_3s1c1")
 [node name="playerEnterSFX" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_n4nx3")
 
+[node name="attackEnterSFX" type="AudioStreamPlayer3D" parent="."]
+
 [editable path="Tree"]

@@ -29,7 +29,7 @@ func handlePlayerEntered(player):
 	
 	playerInArea = true
 	
-	if(playerEnterSFX):
+	if(playerEnterSFX && playerEnterSFX.stream != null):
 		playerEnterSFX.play()
 	
 	if(animationPlayer):
@@ -40,7 +40,7 @@ func handlePlayerEntered(player):
 		if(playerInArea):
 			player.add_damage(damageOnAreaEnter)
 			
-			if(attackEnterSFX):
+			if(attackEnterSFX && attackEnterSFX.stream!=null):
 				attackEnterSFX.play()
 
 func handlePlayerExited(player):

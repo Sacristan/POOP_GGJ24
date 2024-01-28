@@ -50,4 +50,6 @@ shape = SubResource("BoxShape3D_a6a4b")
 [node name="attackEnterSFX" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_kbv8s")
 
+[node name="playerEnterSFX" type="AudioStreamPlayer3D" parent="."]
+
 [editable path="TreeAnvil"]
