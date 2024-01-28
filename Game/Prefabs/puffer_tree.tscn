@@ -24,6 +24,9 @@ bones/5/position = Vector3(-0.0357493, 5.36044, -0.0258512)
 bones/5/scale = Vector3(0.682898, 0.682897, 0.682897)
 bones/6/scale = Vector3(1, 1, 1)
 
+[node name="AnimationPlayer" parent="PufferTree" index="1"]
+speed_scale = 3.0
+
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 3
 
