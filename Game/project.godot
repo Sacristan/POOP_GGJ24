@@ -15,6 +15,10 @@ run/main_scene="res://Levels/Main/Main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://src/Global.gd"
+
 [display]
 
 window/size/viewport_width=1728
@@ -23,6 +27,30 @@ window/size/viewport_height=972
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/object_brush/plugin.cfg")
+
+[importer_defaults]
+
+scene={
+"_subresources": {},
+"animation/fps": 30,
+"animation/import": true,
+"animation/remove_immutable_tracks": true,
+"animation/trimming": false,
+"gltf/embedded_image_handling": 1,
+"gltf/naming_version": 1,
+"import_script/path": "",
+"meshes/create_shadow_meshes": true,
+"meshes/ensure_tangents": true,
+"meshes/force_disable_compression": false,
+"meshes/generate_lods": true,
+"meshes/light_baking": 1,
+"meshes/lightmap_texel_size": 0.2,
+"nodes/apply_root_scale": true,
+"nodes/root_name": "",
+"nodes/root_scale": 1.0,
+"nodes/root_type": "",
+"skins/use_named_skins": true
+}
 
 [input]
 
@@ -91,6 +119,11 @@ look_right={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
 ]
 }
+shoot={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(188, 30),"global_position":Vector2(194, 92),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 extract={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(188, 30),"global_position":Vector2(194, 92),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
@@ -107,7 +140,8 @@ eject={
 3d_physics/layer_1="Objects"
 3d_physics/layer_2="Player"
 3d_physics/layer_4="floor"
-3d_physics/layer_5="projectile"
+3d_physics/layer_5="poop"
+3d_physics/layer_6="truckback"
 
 [rendering]
 

@@ -1,0 +1,90 @@
+[gd_scene load_steps=17 format=3 uid="uid://j4d2gj1eqjgs"]
+
+[ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_7671s"]
+[ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_20mhr"]
+[ext_resource type="Material" uid="uid://sofvlrq3jmka" path="res://Levels/Main/Materials/M_Dark.tres" id="3_b0xpq"]
+[ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="6_rt80a"]
+[ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="7_jrjtw"]
+[ext_resource type="PackedScene" uid="uid://cexjjyukf012l" path="res://Prefabs/rabbit.tscn" id="7_vhwpb"]
+[ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="8_jj63m"]
+[ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="8_nafpi"]
+[ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_8c44g"]
+[ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="10_cylxa"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_h6oae"]
+vertices = PackedVector3Array(-39.5, 0.75, -39.5, -39.5, 0.75, 39.5, 39.5, 0.75, 39.5, 39.5, 0.75, -39.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
+size = Vector3(80, 0.5, 80)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j4se7"]
+points = PackedVector3Array(-40, -0.25, -40, -40, 0.25, -40, 40, -0.25, -40, -40, -0.25, 40, -40, 0.25, 40, 40, 0.25, -40, 40, -0.25, 40, 40, 0.25, 40)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_t5ash"]
+sky_material = SubResource("ProceduralSkyMaterial_ggqlx")
+
+[sub_resource type="Environment" id="Environment_7ofk6"]
+background_mode = 2
+sky = SubResource("Sky_t5ash")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.9
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_7671s")
+
+[node name="Player" parent="." instance=ExtResource("2_20mhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="World" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_h6oae")
+
+[node name="Floor" type="MeshInstance3D" parent="World"]
+mesh = SubResource("BoxMesh_srxwf")
+surface_material_override/0 = ExtResource("3_b0xpq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Floor"]
+collision_layer = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_j4se7")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_7ofk6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866026, -0.5, 0.75, -0.433013, 0, 5, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="Deer" parent="." instance=ExtResource("6_rt80a")]
+transform = Transform3D(-0.983638, 0, -0.180159, 0, 1, 0, 0.180159, 0, -0.983638, 0, 0.720646, -12.482)
+
+[node name="Brush" type="Node3D" parent="."]
+script = ExtResource("7_jrjtw")
+brushSize = 7.24
+brushDensity = 5
+paintableObject = ExtResource("8_nafpi")
+minSize = 1.0
+randomRotMin = Vector3(-15, 0, 0)
+randomRotMax = Vector3(15, 0, 15)
+
+[node name="Rabbit" parent="." instance=ExtResource("7_vhwpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6183, 0.788908, -11.5361)
+
+[node name="RegularTree" parent="." instance=ExtResource("9_8c44g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42969, 0.25, 16.1817)
+
+[node name="AnvilTree" parent="." instance=ExtResource("8_jj63m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98744, 0.370138, -8.56908)
+
+[node name="Truck" parent="." instance=ExtResource("10_cylxa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.43658)

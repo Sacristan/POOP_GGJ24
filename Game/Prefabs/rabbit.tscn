@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cexjjyukf012l"]
+
+[ext_resource type="Script" path="res://src/Rabbit.gd" id="1_v8yks"]
+[ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="2_rf1yl"]
+[ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="2_v01kv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hnng4"]
+
+[node name="Rabbit" type="CharacterBody3D" node_paths=PackedStringArray("shootOrigin")]
+script = ExtResource("1_v8yks")
+speed = 4.0
+projectile = ExtResource("2_v01kv")
+shootOrigin = NodePath("ejector")
+projectileForce = 15.0
+
+[node name="rabbitcube" parent="." instance=ExtResource("2_rf1yl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hnng4")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+debug_enabled = true
+
+[node name="ejector" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.613209)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp1q2nlvdqimx"]
+
+[ext_resource type="Script" path="res://src/Tree.gd" id="1_i8s3q"]
+[ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="1_qk1ms"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3s1c1"]
+size = Vector3(7, 2.81714, 7)
+
+[node name="RegularTree" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823418, 1.48583, 1.64045)
+script = ExtResource("1_i8s3q")
+
+[node name="Tree" parent="." instance=ExtResource("1_qk1ms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823418, -1.48583, -1.64045)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19165, 1.47821, -0.01929)
+shape = SubResource("BoxShape3D_3s1c1")
+
+[editable path="Tree"]

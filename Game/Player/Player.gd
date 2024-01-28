@@ -13,6 +13,32 @@ var input_axis := Vector2()
 @onready var gravity: float = (ProjectSettings.get_setting("physics/3d/default_gravity") 
 		* gravity_multiplier)
 
+var health: float = 100
+
+signal onDamageReceived
+signal onDied
+
+var isDead := false
+
+func _ready():
+	Global.player = self
+
+func add_damage(damage: float):
+	health -= damage
+	
+	onDamageReceived.emit(health)
+	
+	if(health <= 0.001):
+		die()
+
+func die():
+	if(isDead):
+		return
+	else:
+		isDead = true
+		
+	onDied.emit()
+	Global.gameLost()
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
