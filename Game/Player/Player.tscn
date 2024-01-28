@@ -54,12 +54,13 @@ render_target_update_mode = 4
 
 [node name="GunCam" type="Camera3D" parent="Head/Camera/SubViewportContainer/SubViewport" index="0"]
 cull_mask = 0
+current = true
 
 [node name="ToiletGun" parent="Head" index="1" instance=ExtResource("3_iaru4")]
 transform = Transform3D(-0.0383383, 0, 0.398158, 0, 0.4, 0, -0.398158, 0, -0.0383383, 0.391065, -0.221829, -0.198821)
 
 [node name="shootSrc" parent="Head/ToiletGun" index="0"]
-transform = Transform3D(-2.98023e-08, 0, 1, 0, 0.999998, 0, -1, 0, -5.21541e-08, 2.49476, 0, -1.19209e-07)
+transform = Transform3D(0, 0, 1, 0, 0.999998, 0, -1, 0, -3.72529e-08, 2.82489, 0.346429, -1.19209e-07)
 
 [node name="MeshInstance3D" parent="Head/ToiletGun" index="1"]
 visible = false
