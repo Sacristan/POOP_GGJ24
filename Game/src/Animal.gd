@@ -18,6 +18,7 @@ var move := false
 @export var speed: float = 2 
 @onready var body: CharacterBody3D = $"."
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
+@onready var snoringSFX:= $"snoringSFX"
 
 var health: float = 100
 var isDead:=false
@@ -40,6 +41,7 @@ func die():
 	
 func sleep():
 	rotate_x(90)
+	snoringSFX.play()
 	
 	#var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
 	#tween.tween_property(self, "global_rotation", global)
