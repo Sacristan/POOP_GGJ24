@@ -32,16 +32,14 @@ func add_damage(damage: float):
 		die()
 
 func die():
-	if(isDead):
-		return
-	else:
-		isDead = true
-		
+	isDead = true
 	onDied.emit()
-	Global.gameLost()
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
+	if(Global.freezeGameState):
+		return
+	
 	input_axis = Input.get_vector(&"move_back", &"move_forward",
 			&"move_left", &"move_right")
 	

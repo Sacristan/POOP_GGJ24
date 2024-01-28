@@ -11,19 +11,21 @@ signal onAnimalPacified
 signal onGameLost
 signal onGameWon
 
-var isGameEnding:=false
+var freezeGameState: bool:
+	get:
+		return player.isDead || gm.isGameEnding
 
 func checkIfGameWon():
-	if(!isGameEnding && hasGameBeenWon()):
-		isGameEnding = true
+	if(!gm.isGameEnding && hasGameBeenWon()):
+		gm.isGameEnding = true
 		print("gameWon")
 		onGameWon.emit()
 		await Global.wait(2)
 		Global.retryGame()
 
 func gameLost():
-	if(!isGameEnding):
-		isGameEnding = true
+	if(!gm.isGameEnding):
+		gm.isGameEnding = true
 		print("gameLost")
 		onGameLost.emit()
 		await Global.wait(2)
@@ -65,6 +67,19 @@ func poopSpawned(poop: Shit):
 	gm.poopsies.append(poop)
 	gm.cleanPoopsies()
 	onPoopsiesChanged.emit()
+
+const gameScenePath = "res://Levels/Main/Main.tscn"
+const menuScenePath = "res://scenes/menu.tscn"
+const briefingScenePath = "res://scenes/briefing.tscn"
+
+func launchBriefing():
+	get_tree().change_scene_to_file(briefingScenePath)
+	
+func launchGame():
+	get_tree().change_scene_to_file(gameScenePath)
+
+func launchMenu():
+	get_tree().change_scene_to_file(menuScenePath)
 
 func quitGame():
 	get_tree().quit()

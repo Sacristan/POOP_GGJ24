@@ -18,6 +18,9 @@ func _input(event):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if(Global.freezeGameState):
+		return
+	
 	if mouse_mov != null:
 		if mouse_mov > sway_threshold:
 				rotation = rotation.lerp(sway_left, sway_lerp * delta)
