@@ -7,15 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
 [ext_resource type="Texture2D" uid="uid://maitumejh0j4" path="res://Models/PizzaGroundNornmalna.png" id="9_xk8iw"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
-[ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
+[ext_resource type="PackedScene" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
 [ext_resource type="PackedScene" uid="uid://dt2204dd4tlat" path="res://Prefabs/anvil_tree.tscn" id="10_dfbq3"]
 [ext_resource type="PackedScene" uid="uid://c5l675oe8pkvj" path="res://Prefabs/puffer_tree.tscn" id="10_unwhe"]
-[ext_resource type="PackedScene" uid="uid://cexjjyukf012l" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
+[ext_resource type="PackedScene" path="res://Prefabs/rabbit.tscn" id="11_1gb1w"]
 [ext_resource type="PackedScene" uid="uid://ood5evqtomw" path="res://Models/Platform.blend" id="11_7h464"]
 [ext_resource type="PackedScene" uid="uid://cjiovd4cxfcgg" path="res://Models/Trees/Tree.blend" id="11_rk4it"]
 [ext_resource type="PackedScene" uid="uid://dqi4a8rfhauun" path="res://Prefabs/Sniper_Tree.tscn" id="12_6vaq6"]
-[ext_resource type="PackedScene" uid="uid://dlltw84wnx4cr" path="res://truck.tscn" id="14_02hsb"]
+[ext_resource type="PackedScene" path="res://truck.tscn" id="14_02hsb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
 sky_top_color = Color(0.733333, 0.0117647, 0.709804, 1)
@@ -41,8 +41,8 @@ fog_density = 0.002
 fog_sky_affect = 0.107
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1qakk"]
-vertices = PackedVector3Array(47.25, 0.315374, -47.8784, 48.5, 0.315374, -48.1284, 48.5, 0.315374, -49.6284, -49.25, 0.315374, -49.6284, -47.5, 0.315374, -47.6284, 48.5, 0.315374, 49.1216, 48.5, 0.315374, 47.3716, 47.25, 0.315374, 47.1216, -47.5, 0.315374, 46.8716, -49.25, 0.315374, 49.1216, -47.5, 0.315374, 46.8716, -47.5, 0.315374, -47.6284, -49.25, 0.315374, -49.6284, -49.25, 0.315374, 49.1216, 47.5, 0.315374, 46.1216, 47.25, 0.315374, 47.1216, 48.5, 0.315374, 47.3716, 48.5, 0.315374, -48.1284, 47.25, 0.315374, -47.8784, 47.5, 0.315374, -46.8784, 47.5, 0.315374, -46.8784, 46.75, 0.315374, -46.6284, 46.75, 0.315374, 45.8716, 47.5, 0.315374, 46.1216, 47.5, 0.315374, -46.8784, 47.5, 0.315374, 46.1216, 48.5, 0.315374, 47.3716, 48.5, 0.315374, -48.1284, -46.25, 0.315374, -46.6284, -46.25, 0.315374, 45.8716, 45.5, 0.315374, 45.8716, 45.5, 0.315374, -46.6284)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(16, 15, 14), PackedInt32Array(19, 18, 17), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(24, 27, 25), PackedInt32Array(25, 27, 26), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29)]
+vertices = PackedVector3Array(-149.661, 0.317101, -149.064, -149.661, 0.317101, -141.564, -145.911, 0.317101, -141.564, -145.911, 0.317101, -149.064, -144.661, 0.317101, -149.064, -144.661, 0.317101, -141.564, 138.589, 0.317101, -141.564, 138.589, 0.317101, -149.064, 139.839, 0.317101, -149.064, 139.839, 0.317101, -141.564, 149.589, 0.317101, -141.564, 149.589, 0.317101, -149.064, -149.661, 0.317101, 140.686, -147.161, 0.317101, 140.686, -146.911, 0.317101, 140.186, -145.911, 0.317101, -140.314, -149.661, 0.317101, -140.314, -146.911, 0.317101, 140.186, -145.911, 0.317101, 140.186, -145.911, 0.317101, -140.314, -144.661, 0.317101, -140.314, -144.661, 0.317101, 140.186, 138.589, 0.317101, 140.186, 138.589, 0.317101, -140.314, 146.839, 0.317101, 140.186, 147.089, 0.317101, 140.686, 149.589, 0.317101, 140.686, 149.589, 0.317101, -140.314, 139.839, 0.317101, -140.314, 139.839, 0.317101, 140.186, 146.839, 0.317101, 140.186, 149.589, 0.317101, -140.314, -146.911, 0.317101, 141.436, -147.161, 0.317101, 140.686, -149.661, 0.317101, 140.686, -149.661, 0.317101, 147.936, -145.911, 0.317101, 147.936, -145.911, 0.317101, 147.936, -145.911, 0.317101, 141.436, -146.911, 0.317101, 141.436, 149.589, 0.317101, 140.686, 147.089, 0.317101, 140.686, 146.839, 0.317101, 141.436, 149.589, 0.317101, 147.936, 146.839, 0.317101, 141.436, 139.839, 0.317101, 141.436, 139.839, 0.317101, 147.936, 149.589, 0.317101, 147.936, -144.661, 0.317101, 141.436, -144.661, 0.317101, 147.936, 138.589, 0.317101, 147.936, 138.589, 0.317101, 141.436, -149.661, 0.317101, 149.186, -149.661, 0.317101, 149.686, -145.911, 0.317101, 149.686, -145.911, 0.317101, 149.186, -144.661, 0.317101, 149.186, -144.661, 0.317101, 149.686, 138.589, 0.317101, 149.686, 138.589, 0.317101, 149.186, 139.839, 0.317101, 149.186, 139.839, 0.317101, 149.686, 149.589, 0.317101, 149.686, 149.589, 0.317101, 149.186)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(19, 18, 17), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(35, 32, 36), PackedInt32Array(39, 38, 37), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(55, 54, 52), PackedInt32Array(52, 54, 53), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(63, 62, 60), PackedInt32Array(60, 62, 61)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iklx3"]
 albedo_texture = ExtResource("8_rn7f8")
@@ -52,10 +52,10 @@ normal_scale = 16.0
 normal_texture = ExtResource("9_xk8iw")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xyke"]
-size = Vector3(100, 0.1, 100)
+size = Vector3(300, 0.1, 300)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2gus"]
-size = Vector3(100, 7.93018, 1)
+size = Vector3(300, 9, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_c81lp")
@@ -97,6 +97,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.9238
 navigation_mesh = SubResource("NavigationMesh_1qakk")
 
 [node name="Platform" parent="NavigationRegion3D" instance=ExtResource("11_7h464")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.066, 0)
 
 [node name="Plane" parent="NavigationRegion3D/Platform" index="0"]
 material_override = SubResource("StandardMaterial3D_iklx3")
@@ -105,28 +106,28 @@ material_override = SubResource("StandardMaterial3D_iklx3")
 collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Platform/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0907454, 0.0152206, 0.0337982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.090745, 0.436487, 0.0337982)
 shape = SubResource("BoxShape3D_7xyke")
 
 [node name="Mountains" parent="NavigationRegion3D" instance=ExtResource("10_6cpko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41778, 2.69413e-05, -0.18912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41778, 83.971, -0.18912)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Mountains"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Mountains/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02656e-06, 3.46509, -47.5794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-05, -80.3714, -141.148)
 shape = SubResource("BoxShape3D_u2gus")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NavigationRegion3D/Mountains/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26498e-06, 3.46509, 47.2942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.72205e-06, -80.3714, 141.507)
 shape = SubResource("BoxShape3D_u2gus")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="NavigationRegion3D/Mountains/StaticBody3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 46.1637, 3.46509, 2.29416)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 138.863, -80.3714, 2.29415)
 shape = SubResource("BoxShape3D_u2gus")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="NavigationRegion3D/Mountains/StaticBody3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.7363, 3.46509, 2.29416)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -145.926, -80.3714, 2.29416)
 shape = SubResource("BoxShape3D_u2gus")
 
 [node name="Deer" parent="." instance=ExtResource("10_4p7uo")]
@@ -146,6 +147,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.38322)
 
 [node name="Sniper_Tree" parent="." instance=ExtResource("12_6vaq6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3907, 0.315224, 3.94893)
+damageDelay = 0.8
 
 [node name="Truck" parent="." instance=ExtResource("14_02hsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.3485)

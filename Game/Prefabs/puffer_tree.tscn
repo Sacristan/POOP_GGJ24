@@ -11,7 +11,6 @@ script = ExtResource("1_b5jbt")
 animationPlayer = NodePath("PufferTree/AnimationPlayer")
 animationNameOnPlayerPresence = "PufferAnimation"
 damageDelay = 0.5
-damageOnAreaEnter = 100.0
 
 [node name="PufferTree" parent="." instance=ExtResource("1_m1p35")]
 
