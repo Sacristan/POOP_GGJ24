@@ -15,8 +15,10 @@ func _ready():
 func poopOut(dir: Vector3, force: float):
 	eject(dir, force)
 
-func splaySFX():
+func playSFX():
 	audio.stream = Global.randomArrayItem(poopClips)
+	
+	audio.pitch_scale = randf_range(0.6, 1.4)
 	audio.play()
 
 func extract(dir: Vector3, force: float):
@@ -31,7 +33,7 @@ func eject(dir: Vector3, force: float):
 	
 func fire(dir: Vector3, force: float):
 	apply_impulse(dir * force)
-	splaySFX()
+	playSFX()
 	
 func cleanup(time: float):
 	timer.wait_time = time
