@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdupkh0grwy27"]
+[gd_scene load_steps=10 format=3 uid="uid://bdupkh0grwy27"]
 
 [ext_resource type="PackedScene" uid="uid://lqyku5wn2wo0" path="res://Player/MovementController.tscn" id="1_t1jcr"]
 [ext_resource type="PackedScene" uid="uid://b8drbos167vf8" path="res://Player/Head.tscn" id="2_41iu1"]
 [ext_resource type="Script" path="res://Player/Sprint.gd" id="3_bgqcu"]
 [ext_resource type="PackedScene" uid="uid://bsjxv68ubnkqq" path="res://Prefabs/toilet_gun.tscn" id="3_iaru4"]
 [ext_resource type="PackedScene" uid="uid://cbj3o7tu71yf5" path="res://Models/ButtGun/gun.glb" id="4_gtd87"]
+[ext_resource type="PackedScene" uid="uid://dmt0tdgp83kqt" path="res://Models/ButtGun/arm.glb" id="5_1s3vy"]
 [ext_resource type="Script" path="res://Models/ButtGun/gun.gd" id="5_r7m77"]
 [ext_resource type="PackedScene" uid="uid://d1r7nuh6pqa5d" path="res://Prefabs/hud.tscn" id="7_h77we"]
+[ext_resource type="Texture2D" uid="uid://ct0ptayfjcwxh" path="res://Models/textures/crosshair no border.png" id="8_0u8o4"]
 
 [node name="Player" instance=ExtResource("1_t1jcr")]
 
@@ -19,10 +21,23 @@ sway_left = Vector3(0, 0.1, 0)
 sway_right = Vector3(0, -0.1, 0)
 
 [node name="gun" parent="Head/Camera/gunrotation" index="0" instance=ExtResource("4_gtd87")]
-transform = Transform3D(0.316219, 0.00669867, 0.0166488, -0.017139, 0.0256087, 0.315226, 0.00532076, -0.315619, 0.0259301, 0.350551, 0.314535, -0.189724)
+transform = Transform3D(0.316219, 0.00669867, 0.0166488, -0.017139, 0.0256087, 0.315226, 0.00532076, -0.315619, 0.0259301, 0.586983, 0.314535, -0.147057)
 
 [node name="Sphere" parent="Head/Camera/gunrotation/gun" index="0"]
 layers = 2
+
+[node name="arm" parent="Head/Camera/gunrotation/gun" index="1" instance=ExtResource("5_1s3vy")]
+transform = Transform3D(0.22377, 0.19775, 0.132351, 0.180562, -0.0227807, -0.271244, -0.154982, 0.258981, -0.124919, -2.39534, 0.882453, -0.708088)
+
+[node name="Skeleton3D" parent="Head/Camera/gunrotation/gun/arm/Armature" index="0"]
+transform = Transform3D(0.980191, 0.181376, -0.0795445, -0.14651, 0.934298, 0.324993, 0.133265, -0.306901, 0.942364, 0.244173, 0.167225, 0.252398)
+bones/1/rotation = Quaternion(-0.445525, 3.52948, 2.62648, 4.32247)
+bones/2/rotation = Quaternion(0.00747497, -0.099525, -0.00152503, 0.999475)
+bones/4/rotation = Quaternion(-0.530525, -0.00952503, -0.228525, 0.962475)
+bones/7/rotation = Quaternion(-0.691525, -0.00852503, -0.079525, 0.975475)
+bones/10/rotation = Quaternion(-0.649525, 0.00247497, 0.087475, 0.973475)
+bones/13/rotation = Quaternion(-0.473525, 0.00647497, 0.215475, 0.966475)
+bones/16/rotation = Quaternion(-0.551525, -0.037525, 0.303475, 0.949475)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Camera" index="1"]
 anchors_preset = 15
@@ -56,6 +71,28 @@ script = ExtResource("3_bgqcu")
 player = NodePath("..")
 poopGun = NodePath("../Head/ToiletGun")
 
+[node name="CrosshairRect" type="TextureRect" parent="HUD" index="1"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -61.0
+offset_right = 61.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_0u8o4")
+expand_mode = 1
+
+[node name="Crosshair" parent="HUD" index="2"]
+visible = false
+
 [editable path="Head"]
 [editable path="Head/Camera/gunrotation/gun"]
+[editable path="Head/Camera/gunrotation/gun/arm"]
 [editable path="Head/ToiletGun"]
+[editable path="HUD"]
