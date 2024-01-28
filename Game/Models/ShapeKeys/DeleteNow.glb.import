@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://yg64iw1e2jvy"
-path="res://.godot/imported/DeleteLater.gltf-ecfe624ac574f9547cadb7a7e4d6755a.scn"
+uid="uid://x7hyo2n38bgk"
+path="res://.godot/imported/DeleteNow.glb-1ae0594caf64de985d02320ad9685771.scn"
 
 [deps]
 
-source_file="res://Models/ShapeKeys/DeleteLater.gltf"
-dest_files=["res://.godot/imported/DeleteLater.gltf-ecfe624ac574f9547cadb7a7e4d6755a.scn"]
+source_file="res://Models/ShapeKeys/DeleteNow.glb"
+dest_files=["res://.godot/imported/DeleteNow.glb-1ae0594caf64de985d02320ad9685771.scn"]
 
 [params]
 
@@ -28,7 +28,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
-import_script/path="res://Models/ShapeKeys/DeleteLater.gltf"
+import_script/path=""
 _subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
