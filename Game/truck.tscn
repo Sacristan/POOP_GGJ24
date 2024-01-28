@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlltw84wnx4cr"]
+[gd_scene load_steps=7 format=3 uid="uid://dlltw84wnx4cr"]
 
 [ext_resource type="PackedScene" uid="uid://bpv73gaocbyla" path="res://Models/TruckfShapeKeys.glb" id="1_aro3r"]
 [ext_resource type="Script" path="res://src/Truck.gd" id="1_wmr7x"]
 [ext_resource type="AudioStream" uid="uid://ic0fg2n67gor" path="res://audio/idle_car.ogg" id="3_1auam"]
+[ext_resource type="PackedScene" uid="uid://x7hyo2n38bgk" path="res://Models/ShapeKeys/DeleteNow.glb" id="3_wj4jg"]
 [ext_resource type="AudioStream" uid="uid://bl34ltdh0epn0" path="res://audio/anvil_01.wav" id="4_wris2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_582sq"]
@@ -13,6 +14,17 @@ script = ExtResource("1_wmr7x")
 
 [node name="TruckfShapeKeys" parent="." instance=ExtResource("1_aro3r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.89, -0.678124, 0)
+
+[node name="PileOfShit" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0902815, 0)
+
+[node name="DeleteNow" parent="PileOfShit" instance=ExtResource("3_wj4jg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6514, 0, -6.40544)
+
+[node name="PileOfShitForCar" parent="PileOfShit/DeleteNow" index="0"]
+transform = Transform3D(-0.00120094, 0.000778982, 0.999999, 0.0143462, 0.739551, -0.00103588, -0.999896, 0.0106099, -0.00121592, -12.8897, 1.24807, 3.75315)
+blend_shapes/Inflate = -1.0
+blend_shapes/Smaller = 1.0
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 32
@@ -29,3 +41,5 @@ max_distance = 50.0
 
 [node name="ShitDeliverSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_wris2")
+
+[editable path="PileOfShit/DeleteNow"]
