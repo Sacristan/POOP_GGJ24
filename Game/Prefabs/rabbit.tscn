@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cexjjyukf012l"]
+[gd_scene load_steps=8 format=3 uid="uid://cexjjyukf012l"]
 
 [ext_resource type="Script" path="res://src/Rabbit.gd" id="1_v8yks"]
+[ext_resource type="AudioStream" uid="uid://dy0tbe3h2c601" path="res://audio/rabit_01.wav" id="2_2yb33"]
 [ext_resource type="PackedScene" uid="uid://8r8emx5jrwm3" path="res://Models/rabbitcube.glb" id="2_rf1yl"]
 [ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="2_v01kv"]
+[ext_resource type="AudioStream" uid="uid://bkk28l0r5skhl" path="res://audio/rabit_02.wav" id="3_fcgsg"]
 [ext_resource type="AudioStream" uid="uid://bt6domkasbeth" path="res://audio/sleeping_animal.ogg" id="4_7u7si"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hnng4"]
 
 [node name="Rabbit" type="CharacterBody3D" node_paths=PackedStringArray("shootOrigin")]
 script = ExtResource("1_v8yks")
+idleClips = Array[AudioStream]([ExtResource("2_2yb33"), ExtResource("3_fcgsg")])
 speed = 4.0
 projectile = ExtResource("2_v01kv")
 shootOrigin = NodePath("ejector")
@@ -29,3 +32,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.613209)
 [node name="snoringSFX" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_7u7si")
 max_distance = 20.0
+
+[node name="idleSFX" type="AudioStreamPlayer3D" parent="."]

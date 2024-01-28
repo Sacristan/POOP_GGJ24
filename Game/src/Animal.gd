@@ -6,6 +6,7 @@ class_name Animal
 
 @export var minWanderDelayTime: float = 3
 @export var maxWanderDelayTime: float = 10
+@export var idleClips: Array[AudioStream]
 
 const minDist = 5
 const maxDist = 10
@@ -19,6 +20,7 @@ var move := false
 @onready var body: CharacterBody3D = $"."
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var snoringSFX:= $"snoringSFX"
+@onready var idleSFX:= $"idleSFX"
 
 var health: float = 100
 var isDead:=false
@@ -111,6 +113,9 @@ func walkLoop():
 		move = true
 		await reachedDestination
 		
+		idleSFX.stream = Global.randomArrayItem(idleClips)
+		idleSFX.play()	
+	
 		if(isDead):
 			break;
 			

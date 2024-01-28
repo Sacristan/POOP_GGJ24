@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdyh3inpncroh"]
+[gd_scene load_steps=8 format=3 uid="uid://bdyh3inpncroh"]
 
 [ext_resource type="Script" path="res://src/Bear.gd" id="1_4k5yj"]
 [ext_resource type="PackedScene" uid="uid://byqgfx3o6jt4p" path="res://Prefabs/poop.tscn" id="2_22qx1"]
 [ext_resource type="PackedScene" uid="uid://cbd2mawvp3w75" path="res://Models/deercube.glb" id="2_ki57d"]
+[ext_resource type="AudioStream" uid="uid://d4fbb1mrbtshu" path="res://audio/deer_01.wav" id="2_vh6a6"]
+[ext_resource type="AudioStream" uid="uid://dv7m5jnjq8dae" path="res://audio/deer_02.wav" id="3_xk4ni"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijby7"]
 
@@ -14,6 +16,7 @@ stereo = true
 
 [node name="Deer" type="CharacterBody3D" node_paths=PackedStringArray("shootOrigin")]
 script = ExtResource("1_4k5yj")
+idleClips = Array[AudioStream]([ExtResource("2_vh6a6"), ExtResource("3_xk4ni")])
 projectile = ExtResource("2_22qx1")
 shootOrigin = NodePath("ejector")
 projectileForce = 10.0
@@ -32,3 +35,5 @@ avoidance_enabled = true
 
 [node name="snoringSFX" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamWAV_2n3kf")
+
+[node name="idleSFX" type="AudioStreamPlayer3D" parent="."]
