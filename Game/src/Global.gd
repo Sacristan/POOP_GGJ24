@@ -17,6 +17,10 @@ signal onAnimalPacified
 func _process(delta):
 	currentTime+=delta
 
+func animalPacified(animal: Animal):
+	animalsPacified+=1
+	onAnimalPacified.emit()
+
 func registerAnimal(animal: Animal):
 	totalAnimals += 1
 

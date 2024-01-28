@@ -20,15 +20,20 @@ var move := false
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 
 var health: float = 100
+var isDead:=false
 
 func add_damage(damage: float):
 	health -= damage
 	
-	if(health <= 0):
+	if(health <= 0 && !isDead):
 		die()
 
 func die():
-	pass
+	print("die")
+	isDead=true
+	set_process(false)
+	set_physics_process(false)
+	Global.animalPacified(self)
 
 const closeEnoughDist := 1
 
@@ -40,7 +45,7 @@ func _ready():
 	walkLoop()
 	poopLoop()	
 		
-func _physics_process(delta):
+func _physics_process(delta):	
 	if(move):
 		if navigation_agent.is_navigation_finished():
 			return
@@ -84,19 +89,23 @@ func walkLoop():
 	
 	await wait(1).timeout
 	
-	while(true):
+	while(!isDead):
 		targetPos = getWanderPos()
 		#print(targetPos)
 		updateNavAgent()
 		
 		move = true
 		await reachedDestination
+		
+		if(isDead):
+			break;
+			
 		move = false
 		
 		await wait(walkTimeout()).timeout
 
 func poopLoop():
-	while(true):
+	while(!isDead):
 		await wait(poopTimeout()).timeout
 		poop()
 
