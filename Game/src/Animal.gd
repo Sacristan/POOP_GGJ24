@@ -1,8 +1,8 @@
 extends PoopEjector
 class_name Animal
 
-@export var minPoopDelayTime: float = 1
-@export var maxPoopDelayTime: float = 3
+@export var minPoopDelayTime: float = 3
+@export var maxPoopDelayTime: float = 5
 
 @export var minWanderDelayTime: float = 3
 @export var maxWanderDelayTime: float = 10
