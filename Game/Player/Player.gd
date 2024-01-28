@@ -38,8 +38,7 @@ func die():
 		isDead = true
 		
 	onDied.emit()
-	await Global.wait(2)
-	Global.retryGame()
+	Global.gameLost()
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:

@@ -2,6 +2,8 @@ extends Control
 
 @export var player: Player
 @export var poopGun: PoopGun
+@export var panelWonColor: Color
+@export var panelLostColor: Color
 
 @onready var poopStashed: Label = $"Control2/HBoxContainer/PoopStashed"
 @onready var poopRemaining: Label = $"Control2/HBoxContainer/PoopRemaining"
@@ -11,10 +13,24 @@ extends Control
 
 @onready var damageEffect = $damageEffect
 
+@onready var gameOverColorRect: ColorRect = $Panel_GameOver
+@onready var gameOverLabel: Label = $Panel_GameOver/Label
+
 const DamageIndicationAppearTime = 0.5
 const DamageIndicationDissapearTime = 5
 var lastTimeDamageReceived = 0
 var appearTimer = 0
+
+func gameWon():
+	gameOverColorRect.visible = true
+	gameOverColorRect.color = panelWonColor
+	gameOverLabel.text = "Game Won!"
+
+func gameLost():
+	gameOverColorRect.visible = true
+	gameOverColorRect.color = panelLostColor
+	gameOverLabel.text = "Game Lost!"
+		
 
 func _ready():
 	player.onDamageReceived.connect(onReceivedDamage)
@@ -22,6 +38,9 @@ func _ready():
 	
 	Global.onPoopsiesChanged.connect(updatePoopLabel)
 	Global.onAnimalPacified.connect(updateAnimalsLabel)
+	
+	Global.onGameWon.connect(gameWon)
+	Global.onGameLost.connect(gameLost)
 	
 	await Global.wait(0.1)
 	

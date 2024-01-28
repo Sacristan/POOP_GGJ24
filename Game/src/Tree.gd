@@ -32,7 +32,7 @@ func handlePlayerEntered(player):
 		await Global.wait(damageDelay)
 		
 		if(playerInArea):
-			player.add_damage(damageOnAreaEnter)
+			player.add_damage(100)
 
 func handlePlayerExited(player):
 	print("player exited tree "+name)
