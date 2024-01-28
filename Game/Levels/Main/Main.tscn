@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=24 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://Levels/Main/GameManager.gd" id="1_c81lp"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_a8g32"]
 [ext_resource type="Script" path="res://addons/object_brush/Brush.gd" id="4_5sk7t"]
+[ext_resource type="Texture2D" uid="uid://dsnmwfnodqqqp" path="res://Models/textures/PizzaGround.png" id="8_rn7f8"]
 [ext_resource type="PackedScene" uid="uid://cp1q2nlvdqimx" path="res://Prefabs/regular_tree.tscn" id="9_md84u"]
+[ext_resource type="Texture2D" uid="uid://maitumejh0j4" path="res://Models/PizzaGroundNornmalna.png" id="9_xk8iw"]
 [ext_resource type="PackedScene" uid="uid://bqrpd7vccybiy" path="res://Prefabs/testItem.tscn" id="9_ybxfb"]
 [ext_resource type="PackedScene" uid="uid://bdyh3inpncroh" path="res://Prefabs/deer.tscn" id="10_4p7uo"]
 [ext_resource type="PackedScene" uid="uid://dblcesb5jfos0" path="res://Models/Mountains.blend" id="10_6cpko"]
@@ -41,6 +43,13 @@ fog_sky_affect = 0.107
 [sub_resource type="NavigationMesh" id="NavigationMesh_1qakk"]
 vertices = PackedVector3Array(47.25, 0.315374, -47.8784, 48.5, 0.315374, -48.1284, 48.5, 0.315374, -49.6284, -49.25, 0.315374, -49.6284, -47.5, 0.315374, -47.6284, 48.5, 0.315374, 49.1216, 48.5, 0.315374, 47.3716, 47.25, 0.315374, 47.1216, -47.5, 0.315374, 46.8716, -49.25, 0.315374, 49.1216, -47.5, 0.315374, 46.8716, -47.5, 0.315374, -47.6284, -49.25, 0.315374, -49.6284, -49.25, 0.315374, 49.1216, 47.5, 0.315374, 46.1216, 47.25, 0.315374, 47.1216, 48.5, 0.315374, 47.3716, 48.5, 0.315374, -48.1284, 47.25, 0.315374, -47.8784, 47.5, 0.315374, -46.8784, 47.5, 0.315374, -46.8784, 46.75, 0.315374, -46.6284, 46.75, 0.315374, 45.8716, 47.5, 0.315374, 46.1216, 47.5, 0.315374, -46.8784, 47.5, 0.315374, 46.1216, 48.5, 0.315374, 47.3716, 48.5, 0.315374, -48.1284, -46.25, 0.315374, -46.6284, -46.25, 0.315374, 45.8716, 45.5, 0.315374, 45.8716, 45.5, 0.315374, -46.6284)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(16, 15, 14), PackedInt32Array(19, 18, 17), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(24, 27, 25), PackedInt32Array(25, 27, 26), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iklx3"]
+albedo_texture = ExtResource("8_rn7f8")
+metallic_specular = 0.62
+normal_enabled = true
+normal_scale = 16.0
+normal_texture = ExtResource("9_xk8iw")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xyke"]
 size = Vector3(100, 0.1, 100)
@@ -84,10 +93,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56672, 0.25, 3.46945)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97079, 0.25, 11.1868)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.41832, 0.250004, -2.40795)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.92386, -0.0655944, -9.21391)
 navigation_mesh = SubResource("NavigationMesh_1qakk")
 
 [node name="Platform" parent="NavigationRegion3D" instance=ExtResource("11_7h464")]
+
+[node name="Plane" parent="NavigationRegion3D/Platform" index="0"]
+material_override = SubResource("StandardMaterial3D_iklx3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Platform"]
 collision_layer = 9
@@ -97,7 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0907454, 0.0152206, 0.0337
 shape = SubResource("BoxShape3D_7xyke")
 
 [node name="Mountains" parent="NavigationRegion3D" instance=ExtResource("10_6cpko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41778, 2.70009e-05, -0.18912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41778, 2.69413e-05, -0.18912)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Mountains"]
 
@@ -137,3 +149,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3907, 0.315224, 3.94893)
 
 [node name="Truck" parent="." instance=ExtResource("14_02hsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.3485)
+
+[editable path="NavigationRegion3D/Platform"]
