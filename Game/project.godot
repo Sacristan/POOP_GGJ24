@@ -25,10 +25,6 @@ window/size/viewport_width=1728
 window/size/viewport_height=972
 mouse_cursor/custom_image="res://cursor64.png"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/object_brush/plugin.cfg")
-
 [importer_defaults]
 
 scene={
