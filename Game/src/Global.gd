@@ -68,7 +68,7 @@ func poopSpawned(poop: Shit):
 	gm.cleanPoopsies()
 	onPoopsiesChanged.emit()
 
-const gameScenePath = "res://Levels/Main/Main.tscn"
+const gameScenePath = "res://scenes/game.tscn"
 const menuScenePath = "res://scenes/menu.tscn"
 const briefingScenePath = "res://scenes/briefing.tscn"
 
